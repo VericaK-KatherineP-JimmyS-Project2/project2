@@ -1,68 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sample Page</title>
-  <style>
-    /* Paste the provided CSS styles here */
-    .floater_logo {
-      z-index:99;
-      position:absolute !important;
-    }
-    #home_img_holder {
-      width:64px;
-      height:32px;
-      position:relative;
-    }
-    .slot_wrapper {
-      -webkit-box-align:center;
-      -ms-flex-align:center;
-      align-items:center;
-      display:-webkit-box;
-      display:-ms-flexbox;
-      display:flex;
-      -webkit-box-orient:vertical;
-      -webkit-box-direction:normal;
-      -ms-flex-direction:column;
-      flex-direction:column;
-      height:100%;
-      -webkit-box-pack:center;
-      -ms-flex-pack:center;
-      justify-content:center;
-      line-height:0;
-      margin-bottom:12px;
-    }
-    .ad_fadein {
-      opacity:1 !important;
-      -webkit-transition:opacity 0.5s, linear;
-      -o-transition:opacity 0.5s, linear;
-      transition:opacity 0.5s, linear;
-    }
-    /* Add more styles as needed */
-  </style>
+    <title>IMDB</title>
+    <link rel="stylesheet" href="style.css">
+    <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="Vendor/angular.min.js"></script>
+    <script src="Vendor/angular-ui-router.js"></script>
+    <style type="text/css">
+        .navbar{
+            margin-top: 55px;
+        }
+        body {
+
+            background: url(image/bg1.jpg) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
+        h1{
+            color:White;
+            padding-top: 30px;
+        }
+        img{
+            padding-top: 5px;
+            padding-bottom: -165px;
+        }
+    </style>
 </head>
-<body>
-  <header>
-    <div class="floater_logo">
-      <!-- Logo content goes here -->
-      <div id="home_img_holder">
-        <img src="images/imdb_logo.png" alt="Logo">
-      </div>
-    </div>
-  </header>
+<body ng-app="Imdb">
+<div class="container" ng-controller="imdbCtrl" align="left">
+    <img src="images/imdb.png" width="1155" height="200"/>
+    <!--h1 align="center">IMDB</h1-->
+    <nav role="navigation" class="navbar navbar-inverse">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <!--div class="navbar-header">
+            <img src="image/imdb.png" width="150" height="70"/>
 
-  <main>
-    <div class="slot_wrapper">
-      <!-- Main content goes here -->
-      <h1>Welcome to IMDb</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida dui non efficitur feugiat.</p>
-    </div>
-  </main>
 
-  <footer>
-    <!-- Footer content goes here -->
-    <p>&copy; 2024 IMDb. All rights reserved.</p>
-  </footer>
+        </div-->
+        <!-- Collection of nav links, forms, and other content for toggling -->
+        <div class="navbar-header">
+            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="" class="navbar-brand" ng-bind="home" name="home" ng-click="loadPage(this)"></a>
+        </div>
+
+        <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+
+                <li class="dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">Movies, TV </br> & Showtimes <b class="caret"></b></a>
+                    <ul role="menu" class="dropdown-menu">
+                        <li class="dropdown" ng-repeat="items in MoviesItem" ng-click="loadPage(items)"><a href="#" ng-bind="items.itemName"></a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">Celebraties, Events </br> & Photos<b class="caret"></b></a>
+                    <ul role="menu" class="dropdown-menu">
+                        <li class="dropdown" ng-repeat="items in celebItem" ng-click="loadPage(items)"><a href="#" ng-bind="items.itemName"></a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">News &</br> Community<b class="caret"></b></a>
+                    <ul role="menu" class="dropdown-menu">
+
+                        <li class="dropdown" ng-repeat="items in newsItem" ng-click="loadPage(items)"><a href="#" ng-bind="items.itemName"></a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#" >Watchlist<b class="caret"></b></a>
+                    <ul role="menu" class="dropdown-menu">
+                        <li class="dropdown" ng-repeat="items in watchlistItem" ng-click="loadPage(items)"><a href="#" ng-bind="items.itemName"></a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form role="search" class="navbar-form navbar-left">
+                <div class="form-group">
+                    <input type="text" placeholder="Find Movies,Tv Shows,Celebraties and more..." class="form-control">
+                </div>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="register.html">Register</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div ui-view></div>
+        </div>
+    </div>
+</div>
+
+<script src="app/app.js"></script>
+<script src="app/Controller/imdbCtrl.js"></script>
+<script src="app/Factory/factory.js"></script>
 </body>
-</html>
+</html>                
