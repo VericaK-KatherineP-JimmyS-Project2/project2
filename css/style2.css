@@ -6,17 +6,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-#content-2-wide {
-  margin-top: 1%;
-  margin-left: 3%;
-  margin-right: 3%;
-  background-color: white;
-  padding: 1em;
-  border-radius: 2em;
-  display: inline-flex;
-  align-items: center;
-}
-
 /* NAVIGATION */
 
 .imdb {
@@ -176,6 +165,19 @@ body {
  
 /* END NAVIGATION */
 
+/* LOGIN PAGE */
+
+#content-2-wide {
+  margin-top: 1%;
+  margin-left: 3%;
+  margin-right: 3%;
+  background-color: white;
+  padding: 1em;
+  border-radius: 2em;
+  display: inline-flex;
+  align-items: center;
+}
+
 h1 {
 font-size: 2.75em;
 text-align: center;
@@ -212,9 +214,14 @@ li, .list-group {
 
 #perks li {
   width: 90%;
+  padding: 0.4em;
   margin: auto;
   display: inline-flex;
-  border: 0.2em, solid, rgb(181, 181, 181);
+  border-bottom: 0.1em solid rgb(181, 181, 181);
+}
+
+#perks li:last-child {
+  border: none;
 }
 
 #perks li h2 {
@@ -253,11 +260,11 @@ li, .list-group {
   border-radius: 0.5em;
   border-color: rgb(181, 181, 181);
   border-style: solid;
-  border-width: medium;
-  margin-bottom: 2%;
+  border-width: 0.1em;
+  margin: auto;
+  margin-bottom: 0.5em;
   font-size: 1.2;
   width: 70%;
-  margin: auto;
 }
 
 #divider-text, #signin-notice {
@@ -273,6 +280,34 @@ li, .list-group {
   color: #000;
 }
 
-.hovering:hover {
+.hovering:hover, #footer ul li a:hover{
   color: rgb(18, 139, 181);
 }
+
+#footer {
+  margin: 2% 3% 2% 3%;
+  background-color: #000;
+  border-radius: 2em;
+  padding: 0.5em;
+}
+
+#footer ul {
+  display: inline-block;
+  width: 19%;
+  align-items: center;
+  text-align: center;
+}
+
+#footer ul li a {
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+}
+
+#footer p {
+  color: #fff;
+  text-align: center;
+  font-weight: small;
+}
+
+/* END LOGIN PAGE */
