@@ -1,28 +1,30 @@
 .container {
   display: flex;
+
 }
 
-/* Styles for filter box */
+/* Styles for filter sidebar */
 .filter-sidebar {
-  width: 220px; /* Adjust as needed */
+  width: 220px; 
   background-color: #fff;
   border-right: 1px solid #ccc;
   overflow-y: auto;
 }
-.wrapper{
-  margin: 20px;
+
+.wrapper {
+  padding: 20px;
 }
 
 .filter-title {
   font-size: 18px;
   font-weight: bold;
-  margin-bottom: 10px; 
+  margin-bottom: 10px;
 }
 
 .filter-box {
   width: 100%;
   position: relative;
-  margin-right: 10px; 
+  margin-bottom: 10px;
 }
 
 .filter-btn {
@@ -52,25 +54,56 @@
   background-color: #f0f0f0;
 }
 
-/* Styles for movie panel */
+/* Styles for movie content */
 .movie-content {
   flex: 1;
   padding: 20px;
 }
-
 .movie-panel {
   margin-bottom: 20px;
   border: 1px solid #ccc;
+  display: flex;
 }
 .movie-poster {
-  width:100%;
+  width: 150px;
   height: auto;
-  margin-bottom: 10px;
+  margin-right:20px;
 }
 .movie-info {
-  font-size: 14px;
+  flex:1;
 }
 .movie-info > strong {
   margin-right: 5px;
 }
 
+.movie-meta {
+  display: flex;
+}
+.movie-meta span {
+  margin-right: 5px;
+}
+
+/* Styles for footer */
+.footer {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  background-color: #f9f9f9;
+  border-top: 1px solid #ccc;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure footer is above other content */
+}
+
+.footer button {
+  padding: 5px 10px;
+  margin: 0 5px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.footer span {
+  margin: 0 5px;
+}
