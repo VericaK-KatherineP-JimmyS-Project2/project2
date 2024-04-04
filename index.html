@@ -3,30 +3,66 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IMDb</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Sample Page</title>
+  <style>
+    /* Paste the provided CSS styles here */
+    .floater_logo {
+      z-index:99;
+      position:absolute !important;
+    }
+    #home_img_holder {
+      width:64px;
+      height:32px;
+      position:relative;
+    }
+    .slot_wrapper {
+      -webkit-box-align:center;
+      -ms-flex-align:center;
+      align-items:center;
+      display:-webkit-box;
+      display:-ms-flexbox;
+      display:flex;
+      -webkit-box-orient:vertical;
+      -webkit-box-direction:normal;
+      -ms-flex-direction:column;
+      flex-direction:column;
+      height:100%;
+      -webkit-box-pack:center;
+      -ms-flex-pack:center;
+      justify-content:center;
+      line-height:0;
+      margin-bottom:12px;
+    }
+    .ad_fadein {
+      opacity:1 !important;
+      -webkit-transition:opacity 0.5s, linear;
+      -o-transition:opacity 0.5s, linear;
+      transition:opacity 0.5s, linear;
+    }
+    /* Add more styles as needed */
+  </style>
 </head>
 <body>
   <header>
-    <nav>
-      <ul>
-        <li><a href="#">Movies</a></li>
-        <li><a href="#">TV Shows</a></li>
-        <li><a href="#">Celebrities</a></li>
-        <li><a href="#">Watchlist</a></li>
-        <!-- Add more links as needed -->
-      </ul>
-    </nav>
+    <div class="floater_logo">
+      <!-- Logo content goes here -->
+      <div id="home_img_holder">
+        <img src="images/imdb_logo.png" alt="Logo">
+      </div>
+    </div>
   </header>
 
   <main>
-    <!-- Main content goes here -->
+    <div class="slot_wrapper">
+      <!-- Main content goes here -->
+      <h1>Welcome to IMDb</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida dui non efficitur feugiat.</p>
+    </div>
   </main>
 
   <footer>
     <!-- Footer content goes here -->
+    <p>&copy; 2024 IMDb. All rights reserved.</p>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
