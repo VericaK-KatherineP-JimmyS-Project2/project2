@@ -1,1 +1,43 @@
-.wrapper{}
+.wrapper{
+  margin: 20px;
+}
+
+.filter-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px; 
+}
+
+.filter-box {
+  width: 200px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.filter-btn {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  background-color: #f9f9f9;
+  text-align: left;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  width: 100%;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  z-index: 1;
+}
+
+.dropdown-option {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropdown-option:hover {
+  background-color: #f0f0f0;
+}
+
