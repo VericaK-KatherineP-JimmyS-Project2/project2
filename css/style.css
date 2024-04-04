@@ -1,3 +1,14 @@
+.container {
+  display: flex;
+}
+
+/* Styles for filter box */
+.filter-sidebar {
+  width: 220px; /* Adjust as needed */
+  background-color: #fff;
+  border-right: 1px solid #ccc;
+  overflow-y: auto;
+}
 .wrapper{
   margin: 20px;
 }
@@ -9,9 +20,9 @@
 }
 
 .filter-box {
-  width: 200px;
+  width: 100%;
   position: relative;
-  margin-bottom: 20px;
+  margin-right: 10px; 
 }
 
 .filter-btn {
@@ -39,5 +50,27 @@
 
 .dropdown-option:hover {
   background-color: #f0f0f0;
+}
+
+/* Styles for movie panel */
+.movie-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.movie-panel {
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+}
+.movie-poster {
+  width:100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+.movie-info {
+  font-size: 14px;
+}
+.movie-info > strong {
+  margin-right: 5px;
 }
 
