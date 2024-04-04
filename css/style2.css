@@ -1,0 +1,81 @@
+body {
+  background-color: rgb(222, 181, 34);
+}
+
+#content-2-wide {
+  width: 90%;
+  margin: auto;
+  margin-top: 1%;
+  background-color: white;
+  padding: 1em;
+  border-radius: 2em;
+  display: inline-flex;
+  align-items: center;
+}
+ 
+h1 {
+font-size: 2.75em;
+text-align: center;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+#signin-perks {
+  width: 100%;
+  padding-right: 2%;
+}
+
+#signin-options {
+  width: 100%;
+  padding-left: 2%;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0%;
+  padding-right: 0%;
+}
+
+li, .list-group {
+  /* background-color: rgb(18, 139, 181); */
+  /* width: 90%;
+  margin: auto; */
+  text-align: center;
+  padding: 0.75em;
+}
+
+#perks li {
+  width: 90%;
+  margin: auto;
+  display: inline-flex;
+}
+
+#perks li h2 {
+  width: 50%;
+  padding-right: 2%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+#perks li p {
+  width: 50%;
+  padding-left: 2%;
+}
+
+#options li, .list-group {
+  border-radius: 0.5em;
+  border-color: rgb(181, 181, 181);
+  border-style: solid;
+  border-width: medium;
+  margin-bottom: 2%;
+  font-size: 1.2;
+  width: 70%;
+  margin: auto;
+}
+
+#divider-text, #signin-notice {
+  text-align: center;
+}
