@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Project 2</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" media="screen" href="css/meyers_and_normalize-form_resetj.css">
+    <link rel="stylesheet" media="screen" href="css/stylej.css">
+    <script async src="js/scriptj.js"></script>
+  </head>
+  <body>
+    <nav id="main-nav">
+      <div id="nav-cont">
+        <ul id="navbar-nav">
+          <li class="imdb">
+            <a href="index.html" class="imdb">IMDb</a>
+          </li>
+          <li id="menu-items">
+            <button onclick="myFunction()" class="dropbtn">Menu</button>
+            <div id="dropdown">
+              <ul id="dropdown-content">
+                <li>
+                  <h3>Movies</h3>
+                  <ul class="list" role="menu" aria-orientation="vertical">
+                    <li>
+                      <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="https://www.imdb.com/calendar/?ref_=nv_mv_cal" tabindex="-1" aria-disabled="false">
+                        <span class="ipc-list-item__text" role="presentation">Release Calendar</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/chart/top/?ref_=nv_mv_250" tabindex="-1" aria-disabled="false">
+                        <span class="ipc-list-item__text" role="presentation">Top 250 Movies</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/chart/moviemeter/?ref_=nv_mv_mpm" tabindex="-1" aria-disabled="false">
+                        <span class="ipc-list-item__text" role="presentation">Most Popular Movies</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/feature/genre/?ref_=nv_ch_gr" tabindex="-1" aria-disabled="false">
+                        <span class="ipc-list-item__text" role="presentation">Browse Movies by Genre</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/chart/boxoffice/?ref_=nv_ch_cht" tabindex="-1" aria-disabled="false">
+                        <span class="ipc-list-item__text" role="presentation">Top Box Office</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/showtimes/?ref_=nv_mv_sh" tabindex="-1" aria-disabled="false">
+                        <span class="ipc-list-item__text" role="presentation">Showtimes &amp; Tickets</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/news/movie/?ref_=nv_nw_mv" tabindex="-1" aria-disabled="false">
+                        <span class="ipc-list-item__text" role="presentation">Movie News</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/india/toprated/?ref_=nv_mv_in" tabindex="-1" aria-disabled="false">
+                        <span class="ipc-list-item__text" role="presentation">India Movie Spotlight</span>
+                      </a>
+                    </li>
+                  </li>
+  
+                  <li>
+                    <h3>TV Shows</h3>
+                    <ul class="list" role="menu" aria-orientation="vertical">
+                      <li>
+                        <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/whats-on-tv/?ref_=nv_tv_ontv" tabindex="-1" aria-disabled="false">
+                          <span class="ipc-list-item__text" role="presentation">What&#x27;s on TV &amp; Streaming</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/chart/toptv/?ref_=nv_tvv_250" tabindex="-1" aria-disabled="false">
+                          <span class="ipc-list-item__text" role="presentation">Top 250 TV Shows</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/chart/tvmeter/?ref_=nv_tvv_mptv" tabindex="-1" aria-disabled="false">
+                          <span class="ipc-list-item__text" role="presentation">Most Popular TV Shows</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/feature/genre/" tabindex="-1" aria-disabled="false">
+                          <span class="ipc-list-item__text" role="presentation">Browse TV Shows by Genre</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/news/tv/?ref_=nv_nw_tv" tabindex="-1" aria-disabled="false">
+                          <span class="ipc-list-item__text" role="presentation">TV News</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+  
+                  <li>
+                    <h3>Watch</h3>
+                    <ul class="list" role="menu" aria-orientation="vertical">
+                      <li>
+                        <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/what-to-watch/?ref_=nv_watch" tabindex="-1" aria-disabled="false">
+                          <span class="ipc-list-item__text" role="presentation">What to Watch</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/trailers/?ref_=nv_mv_tr" tabindex="-1" aria-disabled="false">
+                          <span class="ipc-list-item__text" role="presentation">Latest Trailers</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/originals/?ref_=nv_sf_ori" tabindex="-1" aria-disabled="false">
+                          <span class="ipc-list-item__text" role="presentation">IMDb Originals</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/imdbpicks/?ref_=nv_pi" tabindex="-1" aria-disabled="false">
+                          <span class="ipc-list-item__text" role="presentation">IMDb Picks</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/spotlight/?ref_=nv_vi_csegspot" tabindex="-1" aria-disabled="false">
+                          <span class="ipc-list-item__text" role="presentation">IMDb Spotlight</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/search/title/?title_type=podcastSeries&amp;ref_=nv_pod" tabindex="-1" aria-disabled="false">
+                          <span class="ipc-list-item__text" role="presentation">IMDb Podcasts</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+  
+                  <li>
+                    <h3>Awards &amp; Events</h3>
+                    <ul class="list" role="menu" aria-orientation="vertical">
+                      <li>
+                        <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/oscars/?ref_=nv_ev_csegosc" tabindex="-1" aria-disabled="false">
+                          <span class="ipc-list-item__text" role="presentation">Oscars</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/sxsw/?ref_=nv_ev_csegsxsw" tabindex="-1" aria-disabled="false">
+                          <span class="ipc-list-item__text" role="presentation">SXSW Film Festival</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/spotlight/?ref_=nv_ev_csegcann" tabindex="-1" aria-disabled="false">
+                          <span class="ipc-list-item__text" role="presentation">Cannes Film Festival</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/starmeterawards/?ref_=nv_ev_sma" tabindex="-1" aria-disabled="false">
+                          <span class="ipc-list-item__text" role="presentation">STARmeter Awards</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/awards-central/?ref_=nv_ev_csegawds" tabindex="-1" aria-disabled="false">
+                          <span class="ipc-list-item__text" role="presentation">Awards Central</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/festival-central/?ref_=nv_ev_csegfest" tabindex="-1" aria-disabled="false">
+                          <span class="ipc-list-item__text" role="presentation">Festival Central</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/event/all/?ref_=nv_ev_all" tabindex="-1" aria-disabled="false">
+                          <span class="ipc-list-item__text" role="presentation">All Events</span>
+                        </a>
+                      </li>
+                      <li>
+                    </ul>
+                  </li>
+  
+                  <li>
+                    <h3>Celebs</h3>
+                    <ul class="list" role="menu" aria-orientation="vertical">
+                      <li>
+                        <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/feature/bornondate/?ref_=nv_cel_brn" tabindex="-1" aria-disabled="false">
+                          <span class="ipc-list-item__text" role="presentation">Born Today</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/chart/starmeter/?ref_=nv_cel_m" tabindex="-1" aria-disabled="false">
+                          <span class="ipc-list-item__text" role="presentation">Most Popular Celebs</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/news/celebrity/?ref_=nv_cel_nw" tabindex="-1" aria-disabled="false">
+                          <span class="ipc-list-item__text" role="presentation">Celebrity News</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+  
+                  <li>
+                    <h3>Community</h3>
+                  </li>
+              </ul>
+            </li>
+          </div>
+          <li id="search">
+            <div id="search-cont">
+              <form role="search" id="s">
+                  <div class="form-group">
+                      <input type="text" placeholder="Find Movies,Tv Shows,Celebraties and more..." class="form-control">
+                  </div>
+              </form>
+            </div>
+          </li>
+          <li id="login">
+            <div id="login-cont">
+              <a href="login.html">Log In</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="filter-sidebar">
+        <div class="wrapper">
+          <div class="filter-title">Filters</div>
+          <div class="filter-box">
+            <div class="filter-btn" onclick="toggleDropdown('genresDropdown')">Genres ▼</div>
+            <div class="dropdown-content" id="genresDropdown">
+              <div class="dropdown-option">Action</div>
+              <div class="dropdown-option">Comedy</div>
+              <div class="dropdown-option">Drama</div>
+              <div class="dropdown-option">Horror</div>
+              <div class="dropdown-option">Thriller</div>
+              <div class="dropdown-option">Romance</div>
+            </div>
+          </div>
+    
+          <div class="filter-box">
+            <div class="filter-btn" onclick="toggleDropdown('titleTypeDropdown')">Title Type ▼</div>
+            <div class="dropdown-content" id="titleTypeDropdown">
+              <div class="dropdown-option">Movie</div>
+              <div class="dropdown-option">TV Show</div>
+              <div class="dropdown-option">Documentary</div>
+              <div class="dropdown-option">Animation</div>
+              <div class="dropdown-option">Series</div>
+              <div class="dropdown-option">Musical</div>
+            </div>
+          </div>
+    
+          <div class="filter-box">
+            <div class="filter-btn" onclick="toggleDropdown('releaseDateDropdown')">Release Date ▼</div>
+            <div class="dropdown-content" id="releaseDateDropdown">
+              <div class="dropdown-option">2020</div>
+              <div class="dropdown-option">2021</div>
+              <div class="dropdown-option">2022</div>
+              <div class="dropdown-option">2023</div>
+              <div class="dropdown-option">2024</div>
+              <div class="dropdown-option">2025</div>
+            </div>
+          </div>
+    
+          <div class="filter-box">
+            <div class="filter-btn" onclick="toggleDropdown('watchDropdown')">Where to Watch ▼</div>
+            <div class="dropdown-content" id="watchDropdown">
+              <div class="dropdown-option">Netflix</div>
+              <div class="dropdown-option">Hulu</div>
+              <div class="dropdown-option">Amazon Prime</div>
+              <div class="dropdown-option">Disney+</div>
+              <div class="dropdown-option">Max</div>
+              <div class="dropdown-option">Peacock</div>
+            </div>
+          </div>
+    
+          <div class="filter-box">
+            <div class="filter-btn" onclick="toggleDropdown('keywordsDropdown')">Keywords ▼</div>
+            <div class="dropdown-content" id="keywordsDropdown">
+              <div class="dropdown-option">Sports</div>
+              <div class="dropdown-option">Superhero</div>
+              <div class="dropdown-option">Fantasy</div>
+              <div class="dropdown-option">Family</div>
+              <div class="dropdown-option">Classics</div>
+              <div class="dropdown-option">War</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    <div class="movie-content">
+      <div class="movie-panel">
+        <img src="images/firstomen.jpg" alt="Movie Poster" class="movie-poster">
+          <div class="movie-info">
+          <div>
+            <strong>Movie Name:</strong> The First Omen<br>
+            <div class="movie-meta">
+              <span><strong>Year:</strong> 2024</span>
+              <span><strong>Rating:</strong> R</span>
+              <span><strong>Length:</strong> 2h</span>
+            </div>
+            <strong>Genre:</strong> Thriller<br>
+            <strong>Director:</strong> Arkasha Stevenson <br>
+            <strong>Stars:</strong> Nell Tiger Free, Ralph Ineson, Sonia Braga <br>
+            <strong>Quick Description:</strong> A young American woman is sent to Rome to begin a life of service to the church, but encounters a darkness that causes her to question her faith and uncovers a terrifying conspiracy that hopes to bring about the birth of evil incarnate.
+          </div>
+        </div>
+      </div>
+    
+      <div class="movie-panel">
+        <img src="images/monkeyman.jpg" alt="Movie Poster" class="movie-poster">
+          <div class="movie-info">
+          <div>
+            <strong>Movie Name:</strong> Monkey Man<br>
+            <div class="movie-meta">
+              <span><strong>Year:</strong> 2024</span>
+              <span><strong>Rating:</strong> R</span>
+              <span><strong>Length:</strong> 3h 2min</span>
+            </div>
+            <strong>Genre:</strong> Thriller<br>
+            <strong>Director:</strong> Dev Patel <br>
+            <strong>Stars:</strong> Dev Patel, Sharlto Copley, Pitobash <br>
+            <strong>Quick Description:</strong> An anonymous young man unleashes a campaign of vengeance against the corrupt leaders who murdered his mother and continue to systemically victimize the poor and powerless.
+          </div>
+        </div>
+      </div>
+    
+      <div class="movie-panel">
+        <img src="images/hopeful.jpg" alt="Movie Poster" class="movie-poster">
+          <div class="movie-info">
+          <div>
+            <strong>Movie Name:</strong> The Hopeful<br>
+            <div class="movie-meta">
+              <span><strong>Year:</strong> 2024</span>
+              <span><strong>Rating:</strong> N/A</span>
+              <span><strong>Length:</strong> 1h 30min</span>
+            </div>
+            <strong>Genre:</strong> Drama<br>
+            <strong>Director:</strong> Kyle Portbury <br>
+            <strong>Stars:</strong> Tommie-Amber Pirie, Georgory Wilson, Maddy Martin <br>
+            <strong>Quick Description:</strong> Aboard a steamship sailing across the Atlantic Ocean in 1874, widower John Andrews delights the restless minds of his two children with a tale of courage, hope, war, and true love that begins with the end of the world.
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <footer class="footer">
+      <button>&lt;</button>
+      <button>1</button>
+      <button>2</button>
+      <button>3</button>
+      <span>...</span>
+      <button>30</button>
+      <button>&gt;</button>
+    </footer>
+    </div>
+  </body>
+</html>
