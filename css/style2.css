@@ -80,7 +80,7 @@ body {
   background-color: #128bb5;
 }
 
-#login {
+.login {
   /* height: 3.5em; */
   text-align: center;
   border: 0.1 solid rgb(181, 181, 181);
@@ -89,12 +89,12 @@ body {
   margin: 0;
 }
 
-#login a {
+.login a {
   color: white;
   text-decoration: none;
 }
 
-#login a:hover {
+.login a:hover {
   color: rgb(18, 139, 181);
 }
 
