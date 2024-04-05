@@ -313,7 +313,7 @@ li, .list-group {
 #footer p {
   color: #fff;
   text-align: center;
-  font-weight: 0.2em;
+  font-weight: light;
 }
 
 /* END LOGIN PAGE */
