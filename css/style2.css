@@ -83,7 +83,7 @@ body {
 .login {
   /* height: 3.5em; */
   text-align: center;
-  border: 0.1 solid rgb(181, 181, 181);
+  border: 0.1em solid rgb(181, 181, 181);
   border-radius: 0.2em;
   padding: 0;
   margin: 0;
@@ -269,7 +269,7 @@ li, .list-group {
   border-width: 0.1em;
   margin: auto;
   margin-bottom: 0.5em;
-  font-size: 1.2;
+  font-size: 1.2em;
   width: 70%;
 }
 
@@ -313,7 +313,7 @@ li, .list-group {
 #footer p {
   color: #fff;
   text-align: center;
-  font-weight: small;
+  font-weight: 0.2em;
 }
 
 /* END LOGIN PAGE */
