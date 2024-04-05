@@ -11,213 +11,159 @@
   </head>
   <body>
     <nav id="main-nav">
-      <div id="nav-cont">
-        <ul id="navbar-nav">
-          <li class="imdb">
-            <a href="index.html" class="imdb">IMDb</a>
-          </li>
-          <li id="menu-items">
-            <button onclick="myFunction()" class="dropbtn">Menu</button>
-            <div id="dropdown">
-              <ul id="dropdown-content">
-                <li>
-                  <h3>Movies</h3>
-                  <ul class="list" role="menu" aria-orientation="vertical">
-                    <li>
-                      <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="https://www.imdb.com/calendar/?ref_=nv_mv_cal" tabindex="-1" aria-disabled="false">
-                        <span class="ipc-list-item__text" role="presentation">Release Calendar</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/chart/top/?ref_=nv_mv_250" tabindex="-1" aria-disabled="false">
-                        <span class="ipc-list-item__text" role="presentation">Top 250 Movies</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/chart/moviemeter/?ref_=nv_mv_mpm" tabindex="-1" aria-disabled="false">
-                        <span class="ipc-list-item__text" role="presentation">Most Popular Movies</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/feature/genre/?ref_=nv_ch_gr" tabindex="-1" aria-disabled="false">
-                        <span class="ipc-list-item__text" role="presentation">Browse Movies by Genre</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/chart/boxoffice/?ref_=nv_ch_cht" tabindex="-1" aria-disabled="false">
-                        <span class="ipc-list-item__text" role="presentation">Top Box Office</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/showtimes/?ref_=nv_mv_sh" tabindex="-1" aria-disabled="false">
-                        <span class="ipc-list-item__text" role="presentation">Showtimes &amp; Tickets</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/news/movie/?ref_=nv_nw_mv" tabindex="-1" aria-disabled="false">
-                        <span class="ipc-list-item__text" role="presentation">Movie News</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/india/toprated/?ref_=nv_mv_in" tabindex="-1" aria-disabled="false">
-                        <span class="ipc-list-item__text" role="presentation">India Movie Spotlight</span>
-                      </a>
-                    </li>
-                  </li>
-  
+    <div id="nav-cont">
+      <ul id="navbar-nav">
+        <li class="imdb">
+          <a href="index.html" class="imdb">IMDb</a>
+        </li>
+        <li id="menu-items">
+          <div class="dropbtn" onclick="toggleDropdown('menu')">Menu</div>
+          <div class="dropdown-content" id="menu">
+            <ul>
+              <li>
+                <h3>Movies</h3>
+                <ul class="list" role="menu" aria-orientation="vertical">
                   <li>
-                    <h3>TV Shows</h3>
-                    <ul class="list" role="menu" aria-orientation="vertical">
-                      <li>
-                        <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/whats-on-tv/?ref_=nv_tv_ontv" tabindex="-1" aria-disabled="false">
-                          <span class="ipc-list-item__text" role="presentation">What&#x27;s on TV &amp; Streaming</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/chart/toptv/?ref_=nv_tvv_250" tabindex="-1" aria-disabled="false">
-                          <span class="ipc-list-item__text" role="presentation">Top 250 TV Shows</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/chart/tvmeter/?ref_=nv_tvv_mptv" tabindex="-1" aria-disabled="false">
-                          <span class="ipc-list-item__text" role="presentation">Most Popular TV Shows</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/feature/genre/" tabindex="-1" aria-disabled="false">
-                          <span class="ipc-list-item__text" role="presentation">Browse TV Shows by Genre</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/news/tv/?ref_=nv_nw_tv" tabindex="-1" aria-disabled="false">
-                          <span class="ipc-list-item__text" role="presentation">TV News</span>
-                        </a>
-                      </li>
-                    </ul>
+                    <a href="https://www.imdb.com/calendar/?ref_=nv_mv_cal">Release Calendar</a>
                   </li>
-  
                   <li>
-                    <h3>Watch</h3>
-                    <ul class="list" role="menu" aria-orientation="vertical">
-                      <li>
-                        <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/what-to-watch/?ref_=nv_watch" tabindex="-1" aria-disabled="false">
-                          <span class="ipc-list-item__text" role="presentation">What to Watch</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/trailers/?ref_=nv_mv_tr" tabindex="-1" aria-disabled="false">
-                          <span class="ipc-list-item__text" role="presentation">Latest Trailers</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/originals/?ref_=nv_sf_ori" tabindex="-1" aria-disabled="false">
-                          <span class="ipc-list-item__text" role="presentation">IMDb Originals</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/imdbpicks/?ref_=nv_pi" tabindex="-1" aria-disabled="false">
-                          <span class="ipc-list-item__text" role="presentation">IMDb Picks</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/spotlight/?ref_=nv_vi_csegspot" tabindex="-1" aria-disabled="false">
-                          <span class="ipc-list-item__text" role="presentation">IMDb Spotlight</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/search/title/?title_type=podcastSeries&amp;ref_=nv_pod" tabindex="-1" aria-disabled="false">
-                          <span class="ipc-list-item__text" role="presentation">IMDb Podcasts</span>
-                        </a>
-                      </li>
-                    </ul>
+                    <a href="/chart/top/?ref_=nv_mv_250">Top 250 Movies</a>
                   </li>
-  
                   <li>
-                    <h3>Awards &amp; Events</h3>
-                    <ul class="list" role="menu" aria-orientation="vertical">
-                      <li>
-                        <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/oscars/?ref_=nv_ev_csegosc" tabindex="-1" aria-disabled="false">
-                          <span class="ipc-list-item__text" role="presentation">Oscars</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/sxsw/?ref_=nv_ev_csegsxsw" tabindex="-1" aria-disabled="false">
-                          <span class="ipc-list-item__text" role="presentation">SXSW Film Festival</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/spotlight/?ref_=nv_ev_csegcann" tabindex="-1" aria-disabled="false">
-                          <span class="ipc-list-item__text" role="presentation">Cannes Film Festival</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/starmeterawards/?ref_=nv_ev_sma" tabindex="-1" aria-disabled="false">
-                          <span class="ipc-list-item__text" role="presentation">STARmeter Awards</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/awards-central/?ref_=nv_ev_csegawds" tabindex="-1" aria-disabled="false">
-                          <span class="ipc-list-item__text" role="presentation">Awards Central</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/festival-central/?ref_=nv_ev_csegfest" tabindex="-1" aria-disabled="false">
-                          <span class="ipc-list-item__text" role="presentation">Festival Central</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/event/all/?ref_=nv_ev_all" tabindex="-1" aria-disabled="false">
-                          <span class="ipc-list-item__text" role="presentation">All Events</span>
-                        </a>
-                      </li>
-                      <li>
-                    </ul>
+                    <a href="/chart/moviemeter/?ref_=nv_mv_mpm">Most Popular Movies</a>
                   </li>
-  
                   <li>
-                    <h3>Celebs</h3>
-                    <ul class="list" role="menu" aria-orientation="vertical">
-                      <li>
-                        <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/feature/bornondate/?ref_=nv_cel_brn" tabindex="-1" aria-disabled="false">
-                          <span class="ipc-list-item__text" role="presentation">Born Today</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/chart/starmeter/?ref_=nv_cel_m" tabindex="-1" aria-disabled="false">
-                          <span class="ipc-list-item__text" role="presentation">Most Popular Celebs</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/news/celebrity/?ref_=nv_cel_nw" tabindex="-1" aria-disabled="false">
-                          <span class="ipc-list-item__text" role="presentation">Celebrity News</span>
-                        </a>
-                      </li>
-                    </ul>
+                    <a href="/feature/genre/?ref_=nv_ch_gr">Browse Movies by Genre</a>
                   </li>
-  
                   <li>
-                    <h3>Community</h3>
+                    <a href="/chart/boxoffice/?ref_=nv_ch_cht">Top Box Office</a>
                   </li>
-              </ul>
-            </li>
+                  <li>
+                    <a href="/showtimes/?ref_=nv_mv_sh">Showtimes &amp; Tickets</a>
+                  </li>
+                  <li>
+                    <a href="/news/movie/?ref_=nv_nw_mv">Movie News</a>
+                  </li>
+                  <li>
+                    <a href="/india/toprated/?ref_=nv_mv_in">India Movie Spotlight</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <h3>TV Shows</h3>
+                <ul class="list" role="menu" aria-orientation="vertical">
+                  <li>
+                    <a href="/whats-on-tv/?ref_=nv_tv_ontv">What&#x27;s on TV &amp; Streaming</a>
+                  </li>
+                  <li>
+                    <a href="/chart/toptv/?ref_=nv_tvv_250">Top 250 TV Shows</a>
+                  </li>
+                  <li>
+                    <a href="/chart/tvmeter/?ref_=nv_tvv_mptv"> Most Popular TV Shows</a>
+                  </li>
+                  <li>
+                    <a href="/feature/genre/">Browse TV Shows by Genre</a>
+                  </li>
+                  <li>
+                    <a href="/news/tv/?ref_=nv_nw_tv"> TV News</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <h3>Watch</h3>
+                <ul class="list" role="menu" aria-orientation="vertical">
+                  <li>
+                    <a href="/what-to-watch/?ref_=nv_watch">What to Watch</a>
+                  </li>
+                  <li>
+                    <a href="/trailers/?ref_=nv_mv_tr">Latest Trailers</a>
+                  </li>
+                  <li>
+                    <a href="/originals/?ref_=nv_sf_ori">IMDb Originals</a>
+                  </li>
+                  <li>
+                    <a href="/imdbpicks/?ref_=nv_pi">IMDb Picks</a>
+                  </li>
+                  <li>
+                    <a href="/spotlight/?ref_=nv_vi_csegspot">IMDb Spotlight</a>
+                  </li>
+                  <li>
+                    <a href="/search/title/?title_type=podcastSeries&amp;ref_=nv_pod">IMDb Podcasts</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <h3>Awards &amp; Events</h3>
+                <ul class="list" role="menu" aria-orientation="vertical">
+                  <li>
+                    <a href="/oscars/?ref_=nv_ev_csegosc">Oscars</a>
+                  </li>
+                  <li>
+                    <a href="/sxsw/?ref_=nv_ev_csegsxsw">SXSW Film Festival</a>
+                  </li>
+                  <li>
+                    <a href="/spotlight/?ref_=nv_ev_csegcann">Cannes Film Festival</a>
+                  </li>
+                  <li>
+                    <a href="/starmeterawards/?ref_=nv_ev_sma">STARmeter Awards</a>
+                  </li>
+                  <li>
+                    <a href="/awards-central/?ref_=nv_ev_csegawds">Awards Central</a>
+                  </li>
+                  <li>
+                    <a href="/festival-central/?ref_=nv_ev_csegfest">Festival Central</a>
+                  </li>
+                  <li>
+                    <a href="/event/all/?ref_=nv_ev_all">All Events</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <h3>Celebs</h3>
+                <ul class="list" role="menu" aria-orientation="vertical">
+                  <li>
+                    <a href="/feature/bornondate/?ref_=nv_cel_brn">Born Today</a>
+                  </li>
+                  <li>
+                    <a href="/chart/starmeter/?ref_=nv_cel_m">Most Popular Celebs</a>
+                  </li>
+                  <li>
+                    <a href="/news/celebrity/?ref_=nv_cel_nw">Celebrity News</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <h3>Community</h3>
+              </li>
+            </ul>
           </div>
-          <li id="search">
-            <div id="search-cont">
-              <form role="search" id="s">
-                  <div class="form-group">
-                      <input type="text" placeholder="Find Movies,Tv Shows,Celebraties and more..." class="form-control">
-                  </div>
-              </form>
-            </div>
-          </li>
-          <li id="login">
-            <div id="login-cont">
-              <a href="login.html">Log In</a>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </nav>
+        </li>
+        <li id="search">
+          <div id="search-cont">
+            <form role="search" id="s">
+                <div class="form-group">
+                    <input type="text" placeholder="Find Movies,Tv Shows,Celebraties and more..." class="form-control">
+                </div>
+            </form>
+          </div>
+        </li>
+        <li class="login">
+          <div class="login-cont">
+            <a href="login.html">Log In</a>
+          </div>
+        </li>
+        <li class="login">
+          <div class="login-cont">
+            <a href="calender.html">Calendar</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
     <div class="sub_header">
       <div class="whats-on-tv-header">What's on TV and Streaming<select name="country" class="form-control" id="country">
       <option value="0" label="Select a country ... " selected="selected">Select a country ... </option>
