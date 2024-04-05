@@ -1,109 +1,666 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>IMDB</title>
-    <link rel="stylesheet" href="css/style.css">
-    <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script src="Vendor/angular.min.js"></script>
-    <script src="Vendor/angular-ui-router.js"></script>
-    <style type="text/css">
-        .navbar{
-            margin-top: 55px;
-        }
-        body {
-
-            background: url(image/bg1.jpg) no-repeat center center fixed;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-        }
-
-        h1{
-            color:White;
-            padding-top: 30px;
-        }
-        img{
-            padding-top: 5px;
-            padding-bottom: -165px;
-        }
-    </style>
-</head>
-<body ng-app="Imdb">
-<div class="container" ng-controller="imdbCtrl" align="left">
-    <img src="images/imdb.png" width="1155" height="200"/>
-    <!--h1 align="center">IMDB</h1-->
-    <nav role="navigation" class="navbar navbar-inverse">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <!--div class="navbar-header">
-            <img src="image/imdb.png" width="150" height="70"/>
-
-
-        </div-->
-        <!-- Collection of nav links, forms, and other content for toggling -->
-        <div class="navbar-header">
-            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a href="" class="navbar-brand" ng-bind="home" name="home" ng-click="loadPage(this)"></a>
-        </div>
-
-        <div id="navbarCollapse" class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-
-                <li class="dropdown">
-                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">Movies, TV </br> & Showtimes <b class="caret"></b></a>
-                    <ul role="menu" class="dropdown-menu">
-                        <li class="dropdown" ng-repeat="items in MoviesItem" ng-click="loadPage(items)"><a href="#" ng-bind="items.itemName"></a></li>
+  <head>
+    <title>Project 2</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" media="screen" href="css/style.css">
+    <link rel="stylesheet" href="css/style2.css">
+    <script async src="js/script.js"></script>
+    
+  </head>
+  <body>
+    <nav id="main-nav">
+      <div id="nav-cont">
+        <ul id="navbar-nav">
+          <li class="imdb">
+            <a href="index.html" class="imdb">IMDb</a>
+          </li>
+          <li id="menu-items">
+            <button onclick="myFunction()" class="dropbtn">Menu</button>
+            <div id="dropdown">
+              <ul id="dropdown-content">
+                <li>
+                  <h3>Movies</h3>
+                  <ul class="list" role="menu" aria-orientation="vertical">
+                    <li>
+                      <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="https://www.imdb.com/calendar/?ref_=nv_mv_cal" tabindex="-1" aria-disabled="false">
+                        <span class="ipc-list-item__text" role="presentation">Release Calendar</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/chart/top/?ref_=nv_mv_250" tabindex="-1" aria-disabled="false">
+                        <span class="ipc-list-item__text" role="presentation">Top 250 Movies</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/chart/moviemeter/?ref_=nv_mv_mpm" tabindex="-1" aria-disabled="false">
+                        <span class="ipc-list-item__text" role="presentation">Most Popular Movies</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/feature/genre/?ref_=nv_ch_gr" tabindex="-1" aria-disabled="false">
+                        <span class="ipc-list-item__text" role="presentation">Browse Movies by Genre</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/chart/boxoffice/?ref_=nv_ch_cht" tabindex="-1" aria-disabled="false">
+                        <span class="ipc-list-item__text" role="presentation">Top Box Office</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/showtimes/?ref_=nv_mv_sh" tabindex="-1" aria-disabled="false">
+                        <span class="ipc-list-item__text" role="presentation">Showtimes &amp; Tickets</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/news/movie/?ref_=nv_nw_mv" tabindex="-1" aria-disabled="false">
+                        <span class="ipc-list-item__text" role="presentation">Movie News</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/india/toprated/?ref_=nv_mv_in" tabindex="-1" aria-disabled="false">
+                        <span class="ipc-list-item__text" role="presentation">India Movie Spotlight</span>
+                      </a>
+                    </li>
+                  </li>
+  
+                  <li>
+                    <h3>TV Shows</h3>
+                    <ul class="list" role="menu" aria-orientation="vertical">
+                      <li>
+                        <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/whats-on-tv/?ref_=nv_tv_ontv" tabindex="-1" aria-disabled="false">
+                          <span class="ipc-list-item__text" role="presentation">What&#x27;s on TV &amp; Streaming</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/chart/toptv/?ref_=nv_tvv_250" tabindex="-1" aria-disabled="false">
+                          <span class="ipc-list-item__text" role="presentation">Top 250 TV Shows</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/chart/tvmeter/?ref_=nv_tvv_mptv" tabindex="-1" aria-disabled="false">
+                          <span class="ipc-list-item__text" role="presentation">Most Popular TV Shows</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/feature/genre/" tabindex="-1" aria-disabled="false">
+                          <span class="ipc-list-item__text" role="presentation">Browse TV Shows by Genre</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/news/tv/?ref_=nv_nw_tv" tabindex="-1" aria-disabled="false">
+                          <span class="ipc-list-item__text" role="presentation">TV News</span>
+                        </a>
+                      </li>
                     </ul>
-                </li>
-                <li class="dropdown">
-                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">Celebraties, Events </br> & Photos<b class="caret"></b></a>
-                    <ul role="menu" class="dropdown-menu">
-                        <li class="dropdown" ng-repeat="items in celebItem" ng-click="loadPage(items)"><a href="#" ng-bind="items.itemName"></a></li>
+                  </li>
+  
+                  <li>
+                    <h3>Watch</h3>
+                    <ul class="list" role="menu" aria-orientation="vertical">
+                      <li>
+                        <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/what-to-watch/?ref_=nv_watch" tabindex="-1" aria-disabled="false">
+                          <span class="ipc-list-item__text" role="presentation">What to Watch</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/trailers/?ref_=nv_mv_tr" tabindex="-1" aria-disabled="false">
+                          <span class="ipc-list-item__text" role="presentation">Latest Trailers</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/originals/?ref_=nv_sf_ori" tabindex="-1" aria-disabled="false">
+                          <span class="ipc-list-item__text" role="presentation">IMDb Originals</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/imdbpicks/?ref_=nv_pi" tabindex="-1" aria-disabled="false">
+                          <span class="ipc-list-item__text" role="presentation">IMDb Picks</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/spotlight/?ref_=nv_vi_csegspot" tabindex="-1" aria-disabled="false">
+                          <span class="ipc-list-item__text" role="presentation">IMDb Spotlight</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/search/title/?title_type=podcastSeries&amp;ref_=nv_pod" tabindex="-1" aria-disabled="false">
+                          <span class="ipc-list-item__text" role="presentation">IMDb Podcasts</span>
+                        </a>
+                      </li>
                     </ul>
-                </li>
-                <li class="dropdown">
-                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">News &</br> Community<b class="caret"></b></a>
-                    <ul role="menu" class="dropdown-menu">
-
-                        <li class="dropdown" ng-repeat="items in newsItem" ng-click="loadPage(items)"><a href="#" ng-bind="items.itemName"></a></li>
+                  </li>
+  
+                  <li>
+                    <h3>Awards &amp; Events</h3>
+                    <ul class="list" role="menu" aria-orientation="vertical">
+                      <li>
+                        <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/oscars/?ref_=nv_ev_csegosc" tabindex="-1" aria-disabled="false">
+                          <span class="ipc-list-item__text" role="presentation">Oscars</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/sxsw/?ref_=nv_ev_csegsxsw" tabindex="-1" aria-disabled="false">
+                          <span class="ipc-list-item__text" role="presentation">SXSW Film Festival</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/spotlight/?ref_=nv_ev_csegcann" tabindex="-1" aria-disabled="false">
+                          <span class="ipc-list-item__text" role="presentation">Cannes Film Festival</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/starmeterawards/?ref_=nv_ev_sma" tabindex="-1" aria-disabled="false">
+                          <span class="ipc-list-item__text" role="presentation">STARmeter Awards</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/awards-central/?ref_=nv_ev_csegawds" tabindex="-1" aria-disabled="false">
+                          <span class="ipc-list-item__text" role="presentation">Awards Central</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/festival-central/?ref_=nv_ev_csegfest" tabindex="-1" aria-disabled="false">
+                          <span class="ipc-list-item__text" role="presentation">Festival Central</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/event/all/?ref_=nv_ev_all" tabindex="-1" aria-disabled="false">
+                          <span class="ipc-list-item__text" role="presentation">All Events</span>
+                        </a>
+                      </li>
+                      <li>
                     </ul>
-                </li>
-                <li class="dropdown">
-                    <a data-toggle="dropdown" class="dropdown-toggle" href="#" >Watchlist<b class="caret"></b></a>
-                    <ul role="menu" class="dropdown-menu">
-                        <li class="dropdown" ng-repeat="items in watchlistItem" ng-click="loadPage(items)"><a href="#" ng-bind="items.itemName"></a></li>
+                  </li>
+  
+                  <li>
+                    <h3>Celebs</h3>
+                    <ul class="list" role="menu" aria-orientation="vertical">
+                      <li>
+                        <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/feature/bornondate/?ref_=nv_cel_brn" tabindex="-1" aria-disabled="false">
+                          <span class="ipc-list-item__text" role="presentation">Born Today</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/chart/starmeter/?ref_=nv_cel_m" tabindex="-1" aria-disabled="false">
+                          <span class="ipc-list-item__text" role="presentation">Most Popular Celebs</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a role="menuitem" class="ipc-list__item nav-link sc-dIouRR exllpz ipc-list__item--indent-one" href="/news/celebrity/?ref_=nv_cel_nw" tabindex="-1" aria-disabled="false">
+                          <span class="ipc-list-item__text" role="presentation">Celebrity News</span>
+                        </a>
+                      </li>
                     </ul>
-                </li>
-            </ul>
-            <form role="search" class="navbar-form navbar-left">
-                <div class="form-group">
-                    <input type="text" placeholder="Find Movies,Tv Shows,Celebraties and more..." class="form-control">
-                </div>
-            </form>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="register.html">Register</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Login</a></li>
-            </ul>
-        </div>
+                  </li>
+  
+                  <li>
+                    <h3>Community</h3>
+                  </li>
+              </ul>
+            </li>
+          </div>
+          <li id="search">
+            <div id="search-cont">
+              <form role="search" id="s">
+                  <div class="form-group">
+                      <input type="text" placeholder="Find Movies,Tv Shows,Celebraties and more..." class="form-control">
+                  </div>
+              </form>
+            </div>
+          </li>
+          <li id="login">
+            <div id="login-cont">
+              <a href="login.html">Log In</a>
+            </div>
+          </li>
+        </ul>
+      </div>
     </nav>
-    <div class="panel panel-default">
-        <div class="panel-body">
-            <div ui-view></div>
-        </div>
-    </div>
+    <div class="sub_header">
+      <div class="whats-on-tv-header">What's on TV and Streaming<select name="country" class="form-control" id="country">
+      <option value="0" label="Select a country ... " selected="selected">Select a country ... </option>
+      <optgroup id="country-optgroup-Africa" label="Africa">
+          <option value="DZ" label="Algeria">Algeria</option>
+          <option value="AO" label="Angola">Angola</option>
+          <option value="BJ" label="Benin">Benin</option>
+          <option value="BW" label="Botswana">Botswana</option>
+          <option value="BF" label="Burkina Faso">Burkina Faso</option>
+          <option value="BI" label="Burundi">Burundi</option>
+          <option value="CM" label="Cameroon">Cameroon</option>
+          <option value="CV" label="Cape Verde">Cape Verde</option>
+          <option value="CF" label="Central African Republic">Central African Republic</option>
+          <option value="TD" label="Chad">Chad</option>
+          <option value="KM" label="Comoros">Comoros</option>
+          <option value="CG" label="Congo - Brazzaville">Congo - Brazzaville</option>
+          <option value="CD" label="Congo - Kinshasa">Congo - Kinshasa</option>
+          <option value="CI" label="Côte d’Ivoire">Côte d’Ivoire</option>
+          <option value="DJ" label="Djibouti">Djibouti</option>
+          <option value="EG" label="Egypt">Egypt</option>
+          <option value="GQ" label="Equatorial Guinea">Equatorial Guinea</option>
+          <option value="ER" label="Eritrea">Eritrea</option>
+          <option value="ET" label="Ethiopia">Ethiopia</option>
+          <option value="GA" label="Gabon">Gabon</option>
+          <option value="GM" label="Gambia">Gambia</option>
+          <option value="GH" label="Ghana">Ghana</option>
+          <option value="GN" label="Guinea">Guinea</option>
+          <option value="GW" label="Guinea-Bissau">Guinea-Bissau</option>
+          <option value="KE" label="Kenya">Kenya</option>
+          <option value="LS" label="Lesotho">Lesotho</option>
+          <option value="LR" label="Liberia">Liberia</option>
+          <option value="LY" label="Libya">Libya</option>
+          <option value="MG" label="Madagascar">Madagascar</option>
+          <option value="MW" label="Malawi">Malawi</option>
+          <option value="ML" label="Mali">Mali</option>
+          <option value="MR" label="Mauritania">Mauritania</option>
+          <option value="MU" label="Mauritius">Mauritius</option>
+          <option value="YT" label="Mayotte">Mayotte</option>
+          <option value="MA" label="Morocco">Morocco</option>
+          <option value="MZ" label="Mozambique">Mozambique</option>
+          <option value="NA" label="Namibia">Namibia</option>
+          <option value="NE" label="Niger">Niger</option>
+          <option value="NG" label="Nigeria">Nigeria</option>
+          <option value="RW" label="Rwanda">Rwanda</option>
+          <option value="RE" label="Réunion">Réunion</option>
+          <option value="SH" label="Saint Helena">Saint Helena</option>
+          <option value="SN" label="Senegal">Senegal</option>
+          <option value="SC" label="Seychelles">Seychelles</option>
+          <option value="SL" label="Sierra Leone">Sierra Leone</option>
+          <option value="SO" label="Somalia">Somalia</option>
+          <option value="ZA" label="South Africa">South Africa</option>
+          <option value="SD" label="Sudan">Sudan</option>
+          <option value="SZ" label="Swaziland">Swaziland</option>
+          <option value="ST" label="São Tomé and Príncipe">São Tomé and Príncipe</option>
+          <option value="TZ" label="Tanzania">Tanzania</option>
+          <option value="TG" label="Togo">Togo</option>
+          <option value="TN" label="Tunisia">Tunisia</option>
+          <option value="UG" label="Uganda">Uganda</option>
+          <option value="EH" label="Western Sahara">Western Sahara</option>
+          <option value="ZM" label="Zambia">Zambia</option>
+          <option value="ZW" label="Zimbabwe">Zimbabwe</option>
+      </optgroup>
+      <optgroup id="country-optgroup-Americas" label="Americas">
+          <option value="AI" label="Anguilla">Anguilla</option>
+          <option value="AG" label="Antigua and Barbuda">Antigua and Barbuda</option>
+          <option value="AR" label="Argentina">Argentina</option>
+          <option value="AW" label="Aruba">Aruba</option>
+          <option value="BS" label="Bahamas">Bahamas</option>
+          <option value="BB" label="Barbados">Barbados</option>
+          <option value="BZ" label="Belize">Belize</option>
+          <option value="BM" label="Bermuda">Bermuda</option>
+          <option value="BO" label="Bolivia">Bolivia</option>
+          <option value="BR" label="Brazil">Brazil</option>
+          <option value="VG" label="British Virgin Islands">British Virgin Islands</option>
+          <option value="CA" label="Canada">Canada</option>
+          <option value="KY" label="Cayman Islands">Cayman Islands</option>
+          <option value="CL" label="Chile">Chile</option>
+          <option value="CO" label="Colombia">Colombia</option>
+          <option value="CR" label="Costa Rica">Costa Rica</option>
+          <option value="CU" label="Cuba">Cuba</option>
+          <option value="DM" label="Dominica">Dominica</option>
+          <option value="DO" label="Dominican Republic">Dominican Republic</option>
+          <option value="EC" label="Ecuador">Ecuador</option>
+          <option value="SV" label="El Salvador">El Salvador</option>
+          <option value="FK" label="Falkland Islands">Falkland Islands</option>
+          <option value="GF" label="French Guiana">French Guiana</option>
+          <option value="GL" label="Greenland">Greenland</option>
+          <option value="GD" label="Grenada">Grenada</option>
+          <option value="GP" label="Guadeloupe">Guadeloupe</option>
+          <option value="GT" label="Guatemala">Guatemala</option>
+          <option value="GY" label="Guyana">Guyana</option>
+          <option value="HT" label="Haiti">Haiti</option>
+          <option value="HN" label="Honduras">Honduras</option>
+          <option value="JM" label="Jamaica">Jamaica</option>
+          <option value="MQ" label="Martinique">Martinique</option>
+          <option value="MX" label="Mexico">Mexico</option>
+          <option value="MS" label="Montserrat">Montserrat</option>
+          <option value="AN" label="Netherlands Antilles">Netherlands Antilles</option>
+          <option value="NI" label="Nicaragua">Nicaragua</option>
+          <option value="PA" label="Panama">Panama</option>
+          <option value="PY" label="Paraguay">Paraguay</option>
+          <option value="PE" label="Peru">Peru</option>
+          <option value="PR" label="Puerto Rico">Puerto Rico</option>
+          <option value="BL" label="Saint Barthélemy">Saint Barthélemy</option>
+          <option value="KN" label="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+          <option value="LC" label="Saint Lucia">Saint Lucia</option>
+          <option value="MF" label="Saint Martin">Saint Martin</option>
+          <option value="PM" label="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
+          <option value="VC" label="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</option>
+          <option value="SR" label="Suriname">Suriname</option>
+          <option value="TT" label="Trinidad and Tobago">Trinidad and Tobago</option>
+          <option value="TC" label="Turks and Caicos Islands">Turks and Caicos Islands</option>
+          <option value="VI" label="U.S. Virgin Islands">U.S. Virgin Islands</option>
+          <option value="US" label="United States">United States</option>
+          <option value="UY" label="Uruguay">Uruguay</option>
+          <option value="VE" label="Venezuela">Venezuela</option>
+      </optgroup>
+      <optgroup id="country-optgroup-Asia" label="Asia">
+          <option value="AF" label="Afghanistan">Afghanistan</option>
+          <option value="AM" label="Armenia">Armenia</option>
+          <option value="AZ" label="Azerbaijan">Azerbaijan</option>
+          <option value="BH" label="Bahrain">Bahrain</option>
+          <option value="BD" label="Bangladesh">Bangladesh</option>
+          <option value="BT" label="Bhutan">Bhutan</option>
+          <option value="BN" label="Brunei">Brunei</option>
+          <option value="KH" label="Cambodia">Cambodia</option>
+          <option value="CN" label="China">China</option>
+          <option value="GE" label="Georgia">Georgia</option>
+          <option value="HK" label="Hong Kong SAR China">Hong Kong SAR China</option>
+          <option value="IN" label="India">India</option>
+          <option value="ID" label="Indonesia">Indonesia</option>
+          <option value="IR" label="Iran">Iran</option>
+          <option value="IQ" label="Iraq">Iraq</option>
+          <option value="IL" label="Israel">Israel</option>
+          <option value="JP" label="Japan">Japan</option>
+          <option value="JO" label="Jordan">Jordan</option>
+          <option value="KZ" label="Kazakhstan">Kazakhstan</option>
+          <option value="KW" label="Kuwait">Kuwait</option>
+          <option value="KG" label="Kyrgyzstan">Kyrgyzstan</option>
+          <option value="LA" label="Laos">Laos</option>
+          <option value="LB" label="Lebanon">Lebanon</option>
+          <option value="MO" label="Macau SAR China">Macau SAR China</option>
+          <option value="MY" label="Malaysia">Malaysia</option>
+          <option value="MV" label="Maldives">Maldives</option>
+          <option value="MN" label="Mongolia">Mongolia</option>
+          <option value="MM" label="Myanmar [Burma]">Myanmar [Burma]</option>
+          <option value="NP" label="Nepal">Nepal</option>
+          <option value="NT" label="Neutral Zone">Neutral Zone</option>
+          <option value="KP" label="North Korea">North Korea</option>
+          <option value="OM" label="Oman">Oman</option>
+          <option value="PK" label="Pakistan">Pakistan</option>
+          <option value="PS" label="Palestinian Territories">Palestinian Territories</option>
+          <option value="YD" label="People's Democratic Republic of Yemen">People's Democratic Republic of Yemen</option>
+          <option value="PH" label="Philippines">Philippines</option>
+          <option value="QA" label="Qatar">Qatar</option>
+          <option value="SA" label="Saudi Arabia">Saudi Arabia</option>
+          <option value="SG" label="Singapore">Singapore</option>
+          <option value="KR" label="South Korea">South Korea</option>
+          <option value="LK" label="Sri Lanka">Sri Lanka</option>
+          <option value="SY" label="Syria">Syria</option>
+          <option value="TW" label="Taiwan">Taiwan</option>
+          <option value="TJ" label="Tajikistan">Tajikistan</option>
+          <option value="TH" label="Thailand">Thailand</option>
+          <option value="TL" label="Timor-Leste">Timor-Leste</option>
+          <option value="TR" label="Turkey">Turkey</option>
+          <option value="TM" label="Turkmenistan">Turkmenistan</option>
+          <option value="AE" label="United Arab Emirates">United Arab Emirates</option>
+          <option value="UZ" label="Uzbekistan">Uzbekistan</option>
+          <option value="VN" label="Vietnam">Vietnam</option>
+          <option value="YE" label="Yemen">Yemen</option>
+      </optgroup>
+      <optgroup id="country-optgroup-Europe" label="Europe">
+          <option value="AL" label="Albania">Albania</option>
+          <option value="AD" label="Andorra">Andorra</option>
+          <option value="AT" label="Austria">Austria</option>
+          <option value="BY" label="Belarus">Belarus</option>
+          <option value="BE" label="Belgium">Belgium</option>
+          <option value="BA" label="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+          <option value="BG" label="Bulgaria">Bulgaria</option>
+          <option value="HR" label="Croatia">Croatia</option>
+          <option value="CY" label="Cyprus">Cyprus</option>
+          <option value="CZ" label="Czech Republic">Czech Republic</option>
+          <option value="DK" label="Denmark">Denmark</option>
+          <option value="DD" label="East Germany">East Germany</option>
+          <option value="EE" label="Estonia">Estonia</option>
+          <option value="FO" label="Faroe Islands">Faroe Islands</option>
+          <option value="FI" label="Finland">Finland</option>
+          <option value="FR" label="France">France</option>
+          <option value="DE" label="Germany">Germany</option>
+          <option value="GI" label="Gibraltar">Gibraltar</option>
+          <option value="GR" label="Greece">Greece</option>
+          <option value="GG" label="Guernsey">Guernsey</option>
+          <option value="HU" label="Hungary">Hungary</option>
+          <option value="IS" label="Iceland">Iceland</option>
+          <option value="IE" label="Ireland">Ireland</option>
+          <option value="IM" label="Isle of Man">Isle of Man</option>
+          <option value="IT" label="Italy">Italy</option>
+          <option value="JE" label="Jersey">Jersey</option>
+          <option value="LV" label="Latvia">Latvia</option>
+          <option value="LI" label="Liechtenstein">Liechtenstein</option>
+          <option value="LT" label="Lithuania">Lithuania</option>
+          <option value="LU" label="Luxembourg">Luxembourg</option>
+          <option value="MK" label="Macedonia">Macedonia</option>
+          <option value="MT" label="Malta">Malta</option>
+          <option value="FX" label="Metropolitan France">Metropolitan France</option>
+          <option value="MD" label="Moldova">Moldova</option>
+          <option value="MC" label="Monaco">Monaco</option>
+          <option value="ME" label="Montenegro">Montenegro</option>
+          <option value="NL" label="Netherlands">Netherlands</option>
+          <option value="NO" label="Norway">Norway</option>
+          <option value="PL" label="Poland">Poland</option>
+          <option value="PT" label="Portugal">Portugal</option>
+          <option value="RO" label="Romania">Romania</option>
+          <option value="RU" label="Russia">Russia</option>
+          <option value="SM" label="San Marino">San Marino</option>
+          <option value="RS" label="Serbia">Serbia</option>
+          <option value="CS" label="Serbia and Montenegro">Serbia and Montenegro</option>
+          <option value="SK" label="Slovakia">Slovakia</option>
+          <option value="SI" label="Slovenia">Slovenia</option>
+          <option value="ES" label="Spain">Spain</option>
+          <option value="SJ" label="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option>
+          <option value="SE" label="Sweden">Sweden</option>
+          <option value="CH" label="Switzerland">Switzerland</option>
+          <option value="UA" label="Ukraine">Ukraine</option>
+          <option value="SU" label="Union of Soviet Socialist Republics">Union of Soviet Socialist Republics</option>
+          <option value="GB" label="United Kingdom">United Kingdom</option>
+          <option value="VA" label="Vatican City">Vatican City</option>
+          <option value="AX" label="Åland Islands">Åland Islands</option>
+      </optgroup>
+      <optgroup id="country-optgroup-Oceania" label="Oceania">
+          <option value="AS" label="American Samoa">American Samoa</option>
+          <option value="AQ" label="Antarctica">Antarctica</option>
+          <option value="AU" label="Australia">Australia</option>
+          <option value="BV" label="Bouvet Island">Bouvet Island</option>
+          <option value="IO" label="British Indian Ocean Territory">British Indian Ocean Territory</option>
+          <option value="CX" label="Christmas Island">Christmas Island</option>
+          <option value="CC" label="Cocos [Keeling] Islands">Cocos [Keeling] Islands</option>
+          <option value="CK" label="Cook Islands">Cook Islands</option>
+          <option value="FJ" label="Fiji">Fiji</option>
+          <option value="PF" label="French Polynesia">French Polynesia</option>
+          <option value="TF" label="French Southern Territories">French Southern Territories</option>
+          <option value="GU" label="Guam">Guam</option>
+          <option value="HM" label="Heard Island and McDonald Islands">Heard Island and McDonald Islands</option>
+          <option value="KI" label="Kiribati">Kiribati</option>
+          <option value="MH" label="Marshall Islands">Marshall Islands</option>
+          <option value="FM" label="Micronesia">Micronesia</option>
+          <option value="NR" label="Nauru">Nauru</option>
+          <option value="NC" label="New Caledonia">New Caledonia</option>
+          <option value="NZ" label="New Zealand">New Zealand</option>
+          <option value="NU" label="Niue">Niue</option>
+          <option value="NF" label="Norfolk Island">Norfolk Island</option>
+          <option value="MP" label="Northern Mariana Islands">Northern Mariana Islands</option>
+          <option value="PW" label="Palau">Palau</option>
+          <option value="PG" label="Papua New Guinea">Papua New Guinea</option>
+          <option value="PN" label="Pitcairn Islands">Pitcairn Islands</option>
+          <option value="WS" label="Samoa">Samoa</option>
+          <option value="SB" label="Solomon Islands">Solomon Islands</option>
+          <option value="GS" label="South Georgia and the South Sandwich Islands">South Georgia and the South Sandwich Islands</option>
+          <option value="TK" label="Tokelau">Tokelau</option>
+          <option value="TO" label="Tonga">Tonga</option>
+          <option value="TV" label="Tuvalu">Tuvalu</option>
+          <option value="UM" label="U.S. Minor Outlying Islands">U.S. Minor Outlying Islands</option>
+          <option value="VU" label="Vanuatu">Vanuatu</option>
+          <option value="WF" label="Wallis and Futuna">Wallis and Futuna</option>
+      </optgroup>
+  </select>
 </div>
+    <div class="container">
+      <div class="filter-sidebar">
+      <div class="wrapper">
+      <div class="filter-title">Filters</div>
+        <div class="filter-box">
+          <div class="filter-btn" onclick="toggleDropdown('genresDropdown')">Genres ▼</div>
+          <div class="dropdown-content" id="genresDropdown">
+            <div class="dropdown-option">Action</div>
+            <div class="dropdown-option">Comedy</div>
+            <div class="dropdown-option">Drama</div>
+            <div class="dropdown-option">Horror</div>
+            <div class="dropdown-option">Thriller</div>
+            <div class="dropdown-option">Romance</div>
+          </div>
+        </div>
 
-<script src="app/app.js"></script>
-<script src="app/Controller/imdbCtrl.js"></script>
-<script src="app/Factory/factory.js"></script>
-</body>
-</html>                
+        <div class="filter-box">
+          <div class="filter-btn" onclick="toggleDropdown('titleTypeDropdown')">Title Type ▼</div>
+          <div class="dropdown-content" id="titleTypeDropdown">
+            <div class="dropdown-option">Movie</div>
+            <div class="dropdown-option">TV Show</div>
+            <div class="dropdown-option">Documentary</div>
+            <div class="dropdown-option">Animation</div>
+            <div class="dropdown-option">Series</div>
+            <div class="dropdown-option">Musical</div>
+          </div>
+        </div>
+  
+        <div class="filter-box">
+          <div class="filter-btn" onclick="toggleDropdown('releaseDateDropdown')">Release Date ▼</div>
+          <div class="dropdown-content" id="releaseDateDropdown">
+            <div class="dropdown-option">2020</div>
+            <div class="dropdown-option">2021</div>
+            <div class="dropdown-option">2022</div>
+            <div class="dropdown-option">2023</div>
+            <div class="dropdown-option">2024</div>
+            <div class="dropdown-option">2025</div>
+          </div>
+        </div>
+
+        <div class="filter-box">
+          <div class="filter-btn" onclick="toggleDropdown('watchDropdown')">Where to Watch ▼</div>
+          <div class="dropdown-content" id="watchDropdown">
+            <div class="dropdown-option">Netflix</div>
+            <div class="dropdown-option">Hulu</div>
+            <div class="dropdown-option">Amazon Prime</div>
+            <div class="dropdown-option">Disney+</div>
+            <div class="dropdown-option">Max</div>
+            <div class="dropdown-option">Peacock</div>
+          </div>
+        </div>
+
+        <div class="filter-box">
+          <div class="filter-btn" onclick="toggleDropdown('keywordsDropdown')">Keywords ▼</div>
+          <div class="dropdown-content" id="keywordsDropdown">
+            <div class="dropdown-option">Sports</div>
+            <div class="dropdown-option">Superhero</div>
+            <div class="dropdown-option">Fantasy</div>
+            <div class="dropdown-option">Family</div>
+            <div class="dropdown-option">Classics</div>
+            <div class="dropdown-option">War</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="movie-content">
+    <div class="movie-panel">
+      <img src="images/monkeyman.jpg" alt="Movie Poster" class="movie-poster">
+      <div class="movie-info">
+        <strong>Movie Name:</strong> Monkey Man<br>
+        <div class="movie-meta">
+          <span><strong>Year:</strong> 2024</span>
+          <span><strong>Rating:</strong> R</span>
+          <span><strong>Length:</strong> 3h 2min</span>
+        </div>
+        <strong>Genre:</strong> Thriller<br>
+        <strong>Director:</strong> Dev Patel <br>
+        <strong>Stars:</strong>Dev Patel, Sharlto Copley, Pitobash <br>
+        <strong>Quick Description:</strong> A young American woman is sent to Rome to begin a life of service to the church, but encounters a darkness that causes her to question her faith and uncovers a terrifying conspiracy that hopes to bring about the birth of evil incarnate.
+      </div>
+    </div>
+
+    <div class="movie-panel">
+      <img src="images/monkeyman.jpg" alt="Movie Poster" class="movie-poster">
+      <div class="movie-info">
+        <strong>Movie Name:</strong> Monkey Man<br>
+        <div class="movie-meta">
+          <span><strong>Year:</strong> 2024</span>
+          <span><strong>Rating:</strong> R</span>
+          <span><strong>Length:</strong> 3h 2min</span>
+        </div>
+        <strong>Genre:</strong> Thriller<br>
+        <strong>Director:</strong> Dev Patel <br>
+        <strong>Stars:</strong>Dev Patel, Sharlto Copley, Pitobash <br>
+        <strong>Quick Description:</strong> A young American woman is sent to Rome to begin a life of service to the church, but encounters a darkness that causes her to question her faith and uncovers a terrifying conspiracy that hopes to bring about the birth of evil incarnate.
+      </div>
+    </div>
+    
+    <div class="movie-panel">
+      <img src="images/monkeyman.jpg" alt="Movie Poster" class="movie-poster">
+      <div class="movie-info">
+        <strong>Movie Name:</strong> Monkey Man<br>
+        <div class="movie-meta">
+          <span><strong>Year:</strong> 2024</span>
+          <span><strong>Rating:</strong> R</span>
+          <span><strong>Length:</strong> 3h 2min</span>
+        </div>
+        <strong>Genre:</strong> Thriller<br>
+        <strong>Director:</strong> Dev Patel <br>
+        <strong>Stars:</strong>Dev Patel, Sharlto Copley, Pitobash <br>
+        <strong>Quick Description:</strong> A young American woman is sent to Rome to begin a life of service to the church, but encounters a darkness that causes her to question her faith and uncovers a terrifying conspiracy that hopes to bring about the birth of evil incarnate.
+      </div>
+    </div>
+  </div>
+  <div class="movie-content">
+    <div class="movie-panel">
+      <img src="images/monkeyman.jpg" alt="Movie Poster" class="movie-poster">
+      <div class="movie-info">
+        <strong>Movie Name:</strong> Monkey Man<br>
+        <div class="movie-meta">
+          <span><strong>Year:</strong> 2024</span>
+          <span><strong>Rating:</strong> R</span>
+          <span><strong>Length:</strong> 3h 2min</span>
+        </div>
+        <strong>Genre:</strong> Thriller<br>
+        <strong>Director:</strong> Dev Patel <br>
+        <strong>Stars:</strong>Dev Patel, Sharlto Copley, Pitobash <br>
+        <strong>Quick Description:</strong> A young American woman is sent to Rome to begin a life of service to the church, but encounters a darkness that causes her to question her faith and uncovers a terrifying conspiracy that hopes to bring about the birth of evil incarnate.
+      </div>
+    </div>
+
+    <div class="movie-panel">
+      <img src="images/monkeyman.jpg" alt="Movie Poster" class="movie-poster">
+      <div class="movie-info">
+        <strong>Movie Name:</strong> Monkey Man<br>
+        <div class="movie-meta">
+          <span><strong>Year:</strong> 2024</span>
+          <span><strong>Rating:</strong> R</span>
+          <span><strong>Length:</strong> 3h 2min</span>
+        </div>
+        <strong>Genre:</strong> Thriller<br>
+        <strong>Director:</strong> Dev Patel <br>
+        <strong>Stars:</strong>Dev Patel, Sharlto Copley, Pitobash <br>
+        <strong>Quick Description:</strong> A young American woman is sent to Rome to begin a life of service to the church, but encounters a darkness that causes her to question her faith and uncovers a terrifying conspiracy that hopes to bring about the birth of evil incarnate.
+      </div>
+    </div>
+    
+    <div class="movie-panel">
+      <img src="images/monkeyman.jpg" alt="Movie Poster" class="movie-poster">
+      <div class="movie-info">
+        <strong>Movie Name:</strong> Monkey Man<br>
+        <div class="movie-meta">
+          <span><strong>Year:</strong> 2024</span>
+          <span><strong>Rating:</strong> R</span>
+          <span><strong>Length:</strong> 3h 2min</span>
+        </div>
+        <strong>Genre:</strong> Thriller<br>
+        <strong>Director:</strong> Dev Patel <br>
+        <strong>Stars:</strong>Dev Patel, Sharlto Copley, Pitobash <br>
+        <strong>Quick Description:</strong> A young American woman is sent to Rome to begin a life of service to the church, but encounters a darkness that causes her to question her faith and uncovers a terrifying conspiracy that hopes to bring about the birth of evil incarnate.
+      </div>
+    </div>
+  </div>
+
+
+  <footer class="footer">
+    <a href="#" class="footer-link">More to Explore</a>    
+    <button>&lt;</button>
+    <button>1</button>
+    <button>2</button>
+    <button>3</button>
+    <span>...</span>
+    <button>30</button>
+    <button>&gt;</button>
+  </footer>
+</div>
+  </body>
+</html>
