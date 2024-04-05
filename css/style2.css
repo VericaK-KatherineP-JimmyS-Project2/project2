@@ -1,0 +1,313 @@
+body {
+  width: 100%;
+  background-color: rgb(222, 181, 34);
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* NAVIGATION */
+
+.imdb {
+  font-size: 1.2em;
+  padding: 0.1em;
+  margin: 0;
+  color: black;
+  /* border: 0.2em solid #000; */
+  background-color: rgb(222, 181, 34);
+  border-radius: 0.2em;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#main-nav {
+  background-color: #000;
+  overflow: hidden;
+  height: 3.5em;
+}
+
+#nav-cont {
+  padding: 0;
+  float: left;
+  width: 100%;
+  position: relative;
+}
+
+#main-nav #navbar-nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  left: 50%;
+  float: left;
+}
+
+#main-nav #navbar-nav li {
+  font-size: 1.2em;
+  /* float: left; */
+  position: relative;
+  right: 50%;
+  display: inline-block;
+  color: #fff;
+}
+
+/* #navbar-nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#navbar-nav ul li {
+  display: inline-block;
+  margin-right: 30%;
+}
+
+#navbar-nav ul li:last-child {
+  margin-right: 0;
+} */
+
+#menu-items {
+  /* height: 3.5em; */
+  /* background-color: purple; */
+  padding: 0;
+  /* width: 150%; */
+  
+}
+
+#login {
+  /* height: 3.5em; */
+  text-align: center;
+  border: 0.1 solid rgb(181, 181, 181);
+  border-radius: 0.2em;
+  padding: 0;
+  margin: 0;
+}
+
+#login a {
+  color: white;
+  text-decoration: none;
+}
+
+#login a:hover {
+  color: rgb(18, 139, 181);
+}
+
+/* #login-cont {
+  border: 0.1 solid rgb(181, 181, 181);
+  border-radius: 0.2em;
+  padding: 0;
+  margin: 0;
+} */
+
+#search {
+  /* height: 3.5em; */
+  padding: 0;
+  font-size: 2em;
+  /* background-color: blue; */
+}
+
+
+/* #main-nav ul li a {
+  display: block;
+  padding: 0.5em 1em;
+  color: #fff;
+  text-decoration: none;
+}
+
+#main-nav ul li a:hover {
+  background-color: #fff;
+  color: #000;
+} */
+
+
+/* .dropdown {
+  position: relative;
+  display: inline-block;
+} */
+
+.dropbtn {
+  background-color: black;
+  color: white;
+  padding: 0.7em;
+  font-size: 1em;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown Content (Hidden by Default) */
+#dropdown-content {
+  display: none;
+  position: absolute;
+  /* background-color: #f1f1f1; */
+  min-width: 160px;
+  /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+  z-index: 1;
+}
+
+#dropdown-content li {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropbtn:hover {
+  color: rgb(18, 139, 181);
+}
+
+.dropbtn:hover .dropdown-content {
+  display: block;
+}
+
+/* .show {
+  display:block;
+} */
+ 
+/* END NAVIGATION */
+
+/* LOGIN PAGE */
+
+#content-2-wide {
+  margin-top: 1%;
+  margin-left: 3%;
+  margin-right: 3%;
+  background-color: white;
+  padding: 1em;
+  border-radius: 2em;
+  display: inline-flex;
+  align-items: center;
+}
+
+h1 {
+font-size: 2.75em;
+text-align: center;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+#signin-perks {
+  width: 100%;
+  padding-right: 2%;
+}
+
+#signin-options {
+  width: 100%;
+  padding-left: 2%;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0%;
+  padding-right: 0%;
+}
+
+li, .list-group {
+  /* background-color: rgb(18, 139, 181); */
+  /* width: 90%; */
+  /* margin: auto; */
+  text-align: center;
+  padding: 0.75em;
+}
+
+#perks li {
+  width: 90%;
+  padding: 0.4em;
+  margin: auto;
+  display: inline-flex;
+  border-bottom: 0.1em solid rgb(181, 181, 181);
+}
+
+#perks li:last-child {
+  border: none;
+}
+
+#perks li h2 {
+  width: 50%;
+  padding-right: 2%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+#perks li p {
+  width: 50%;
+  padding-left: 2%;
+}
+
+#vl {
+  border-left: 0.2em solid rgb(181, 181, 181);
+  height: 70%;
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  margin: auto;
+  padding: 0;
+}
+
+.hl {
+  border-left: 0.2em solid rgb(181, 181, 181);
+  width: 70%;
+  position: absolute;
+  /* left: 50%;
+  right: 50%; */
+  margin: auto;
+  padding: 0;
+}
+
+#options li, .list-group {
+  border-radius: 0.5em;
+  border-color: rgb(181, 181, 181);
+  border-style: solid;
+  border-width: 0.1em;
+  margin: auto;
+  margin-bottom: 0.5em;
+  font-size: 1.2;
+  width: 70%;
+}
+
+#divider-text, #signin-notice {
+  text-align: center;
+}
+
+#signin-notice {
+  font-size: small;
+}
+
+.hovering {
+  text-decoration: none;
+  color: #000;
+}
+
+.hovering:hover, #footer ul li a:hover{
+  color: rgb(18, 139, 181);
+}
+
+#footer {
+  margin: 2% 3% 2% 3%;
+  background-color: #000;
+  border-radius: 2em;
+  padding: 0.5em;
+}
+
+#footer ul {
+  display: inline-block;
+  width: 19%;
+  align-items: center;
+  text-align: center;
+}
+
+#footer ul li a {
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+}
+
+#footer p {
+  color: #fff;
+  text-align: center;
+  font-weight: small;
+}
+
+/* END LOGIN PAGE */
