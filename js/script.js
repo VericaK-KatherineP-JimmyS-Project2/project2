@@ -1,17 +1,9 @@
 
-function myFunction() {
-    document.getElementById("dropdown-content").classList.toggle('.show');
-  }
-  
-  window.onclick = function(event) {
-    if (!event.target.matches('.dropbtn')) {
-      var dropdowns = document.getElementsByClassName("dropdown");
-      var i;
-      for (i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains('show')) {
-          openDropdown.classList.remove('show');
-        }
-      }
+function toggleDropdown(id){
+    var dropdown = document.getElementById(id);
+    if (dropdown.style.display === 'none' || dropdown.style.display === '') {
+      dropdown.style.display = 'block';
+    } else {
+      dropdown.style.display = 'none';
     }
-  }
+}
