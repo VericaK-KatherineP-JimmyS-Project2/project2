@@ -40,6 +40,7 @@ body {
   position: relative;
   left: 50%;
   float: left;
+  width: auto;
 }
 
 #main-nav #navbar-nav li {
@@ -49,6 +50,10 @@ body {
   right: 50%;
   display: inline-block;
   color: #fff;
+}
+
+.form-control {
+  width: 100%;
 }
 
 /* #navbar-nav ul {
@@ -86,7 +91,7 @@ body {
 /*   border: 0.1em solid rgb(181, 181, 181); 
   border-radius: 0.2em;*/
   padding: 0;
-  margin: 0;
+  margin: 1em;
 }
 
 .login a {
@@ -286,7 +291,7 @@ li, .list-group {
   color: #000;
 }
 
-.hovering:hover, #footer ul li a:hover{
+.hovering:hover, #footer ul li a:hover, .filter-btn:hover{
   color: rgb(18, 139, 181);
 }
 
@@ -324,16 +329,16 @@ li, .list-group {
 }
 
 /* Styles for filter sidebar */
-.filter-sidebar {
+/* .filter-sidebar {
   width: 220px; 
   background-color:#deb522;
   border-right: 1px solid #ccc;
   overflow-y: auto;
-}
+} */
 
 .wrapper {
-  padding: 20px;
-  overflow: hidden;
+  padding: 15%;
+  height: auto;
 }
 
 .filter-title {
@@ -347,19 +352,20 @@ li, .list-group {
   width: 100%;
   position: relative;
   margin-bottom: 10px;
+  margin-left: 0%;
+  margin-right: 0%;
 
 }
 
 .filter-btn {
   font-family: Arial, Helvetica, sans-serif;
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
+  width: 90%;
+  padding: 1em;
+  border: 3px solid #ccc;
   cursor: pointer;
-  background-color: #128bb5;
   text-align: left;
   border-radius: 0.7em;
-  padding-left: 0%;
+  padding-left: 5%;
 }
 
 .dropdown-content {
@@ -367,6 +373,7 @@ li, .list-group {
   display: none;
   position: absolute;
   width: 100%;
+  height: auto;
   border: 1px solid #ccc;
   background-color: #fff;
   z-index: 1;
@@ -383,28 +390,40 @@ li, .list-group {
 }
 
 /* Styles for movie content */
-.movie-content {
-  flex: 1;
-  padding: 20px;
+#movies {
+  flex: 2;
+  padding: 2%;
+  margin: 2%;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
 }
-.movie-panel {
-  margin-right: 20px;
-  border: 1px solid rgb(181,181,181);
-  background-color:rgb(181,181,181);
-  margin-bottom: 20px;
-  border-radius: 0.7em;
 
+.img {
+  width: 20%;
+  margin-right: 5%;
+}
+
+.movie-panel {
+  margin-right: 2%;
+  margin-bottom: 2%;
+  margin-top: 0%;
+  margin-left: 0%;
+  padding: 0%;
+  width: 100%;
+  border: 1px solid rgb(219, 219, 219);
+  background-color:rgb(219, 219, 219);
+  border-radius: 0 0.7em 0.7em 0;
+  display: flex;
 }
 
 .movie-poster {
+  height: 100%;
   width: auto;
-  height: 130px;
   margin-bottom:10px;
 }
 .movie-info {
+  width: auto;
   padding:10px;
 }
 
@@ -460,48 +479,61 @@ li, .list-group {
   margin: 0 5px;
   color:#fcf7f7
 }
+
+.filter-sidebar {
+  width: 20%;
+  height: 100%;
+  border-right: 3px solid #ccc;
+}
+
+.index-container {
+  display: flex;
+  padding: 0%;
+}
 /* END CALENDAR PAGE */
 
 /* INDEX PAGE */
-.container {
+/* .index-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap:20px;
+  grid-template-columns: repeat(35%);
+  /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap:1%;
   width: 90%;
   margin: 0 auto;
+} */
+
+#main-page {
+  display: flex;
 }
 
 /*Styles for What's On TV Subheader*/
 /* Add border around "What's on TV" section */
 .sub_header {
-  border-radius: 8px;
-  padding: 20px;
-  margin-bottom: 20px;
+  padding: 2%;
+  height: auto;
+  margin-bottom: 2%;
   position: relative;
 }
 
+#heading {
+  padding: 0;
+  font-size: 2em;
+}
+
 .whats-on-tv-header{
-  background-color: #333; /* Set background color to dark gray */
-  color: white; /* Set text color to white */
-  padding: 10px 20px; /* Add padding for spacing */
-  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black; /* Set text color to white */
   top: 0;
   left: 0;
   width: 100%;
   box-sizing: border-box;
-  font-size: xx-large;
+  text-align: center;
+  font-weight: bold;
 }
 
-
-/* Styles for filter sidebar */
-
-@media only screen and (max-width: 600px) {
-  .filter-sidebar {
-    max-width: 100%; /* Make the filter sidebar take full width on smaller screens */
-    margin-right: 0; /* Remove margin on smaller screens */
-  }
+#country {
+  width: 20%;
 }
-
 /* Styles for footer */
 
 
@@ -517,14 +549,21 @@ li, .list-group {
   width: calc(50% - 10px); /* 50% width with 10px margin in between */
 }
 
-@media only screen and (max-width: 600px) {
-  .movie-panel {
-    width: 100%; /* Full width on smaller screens */
-  }
-}
-
 /*consolidated media queries*/
-@media only screen and (max-width: 600px) {
+/* @media only screen and (max-width: 600px) {
+  .filter-sidebar {
+    max-width: 100%;
+    margin-right: 0;
+  }
+  .movie-panel {
+    width: 100%;
+  }
+  .whats-on-tv-header {
+    font-size: large;
+  }
+} */
+
+@media only screen and (min-width: 600px) {
   .filter-sidebar {
     max-width: 100%;
     margin-right: 0;
