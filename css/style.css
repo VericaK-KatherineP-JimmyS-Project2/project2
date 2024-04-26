@@ -269,6 +269,100 @@ li, .list-group {
 
 /* END LOGIN PAGE */
 
+/* SIGN UP BUTTON */
+/* General Styles for the Button */
+.list-group button {
+  background-color: #007BFF; /* IMDb blue */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  display: block; /* Ensure it's block to center easily if needed */
+  margin: 10px auto; /* Centering the button */
+  width: 200px; /* Fixed width for consistency */
+}
+
+.list-group button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+  opacity: 0.9;
+}
+
+/* Styles for the Modal Background */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1; /* Make sure it's above other content */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0,0,0,0.4); /* Dimming background */
+}
+
+/* Styles for the Modal Content Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto; /* Help center the box vertically and horizontally */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 90%; /* Responsive width */
+  max-width: 450px; /* Maximum width */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Soft shadow for depth */
+}
+
+/* Close Button Styles */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Form Styling */
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-content form input[type="text"],
+.modal-content form input[type="email"],
+.modal-content form input[type="password"] {
+  width: 100%; /* Full width of the form container */
+  padding: 8px;
+  margin: 8px 0;
+  box-sizing: border-box; /* Includes padding and border in width and height */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.modal-content form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #04AA6D; /* Green for actions */
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.modal-content form button:hover {
+  background-color: #037d50; /* Darker green on hover */
+}
+
+/* END SIGN UP BUTTON */
+
+
 /* CALENDAR PAGE */
 .container {
   display: flex;
