@@ -219,12 +219,31 @@
           
         </ul>
         <p id="divider-text">or</p>
-        <div class="list-group">
-          <a href="https://www.imdb.com/ap/register?openid.return_to=https%3A%2F%2Fwww.imdb.com%2Fregistration%2Fap-signin-handler%2Fimdb_us&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=imdb_us&openid.mode=checkid_setup&siteState=eyJvcGVuaWQuYXNzb2NfaGFuZGxlIjoiaW1kYl91cyIsInJlZGlyZWN0VG8iOiJodHRwczovL3d3dy5pbWRiLmNvbS8_cmVmXz1sb2dpbiJ9&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&tag=imdbtag_reg-20" class="hovering">Create a New Account</a>
-        </div>
-        <p id="signin-notice">By signing in, you agree to IMDb's <a href="/conditions" class="hovering">Conditions of Use</a> and <a href="/privacy" class="hovering">Privacy Policy</a>.</p>
-    </div>
+        <!-- Create a New Account Button -->
+<div class="list-group">
+  <button id="create-account-btn">Create a New Account</button>
+</div>
+
+<!-- Modal Structure -->
+<div id="signup-modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Create account</h2>
+    <form>
+      <label for="name">Your name</label>
+      <input type="text" id="name" name="name" placeholder="Your name" required>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Email" required>
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Password" required>
+      <p>Passwords must be at least 8 characters.</p>
+      <label for="confirm-password">Re-enter password</label>
+      <input type="password" id="confirm-password" name="confirm-password" placeholder="Re-enter password" required>
+      <button type="submit">Create your IMDb account</button>
+    </form>
   </div>
+</div>
+
 
   <div id="footer">
 
@@ -331,4 +350,6 @@
     <p>An Amazon Company</p>
     <p>© 1990-2024 by IMDb.com, Inc.</p>
   </div>
-</body>
+  </body>
+<script src="js/script.js"></script>
+</html>
