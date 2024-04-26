@@ -1,117 +1,126 @@
 body {
-    width: 100%;
-    height: auto;
-    background-color: rgb(255, 255, 255);
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-  }
+  width: 100%;
+  height: auto;
+  background-color: rgb(255, 255, 255);
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#login-body {
+  width: 100%;
+  height: 100%;
+  background-color: #deb522;
+}
+
+/* NAVIGATION */
+
+.imdb {
+  font-size: 1.2em;
+  padding: 0.1em;
+  margin: auto;
+  color: black;
+  background-color: rgb(222, 181, 34);
+  border-radius: 0.2em;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#main-nav {
+  background-color: #000;
+  overflow: hidden;
+  height: 3em;
+}
+
+#nav-cont {
+  padding: 0;
+  float: left;
+  width: 100%;
+  position: relative;
+}
+
+#main-nav ul {
+  list-style-type: none;
+  margin: auto;
+  padding: 0;
+  position: relative;
+  left: 50%;
+  float: left;
+}
+
+#main-nav ul li {
+  font-size: 0.75em;
+  margin: auto;
+  margin-right: 0.5em;
+  margin-top: 0.8em;
+  position: relative;
+  right: 50%;
+  display: inline-block;
+  color: #fff;
+}
+
+.form-control {
+  width: 100%;
+}
+
+#s {
+  width: 100%;
+}
+
+#menu-items {
+  padding: 0;
   
-  /* NAVIGATION */
+}
+
+#menu {
+  width: 100%;
+  height: auto;
+  background-color: #128bb5;
+}
+
+.login {
+  text-align: center;
+  padding: 0;
+}
+
+.login a {
+  color: white;
+  text-decoration: none;
+}
+
+
+#search {
+  padding: 0;
+  margin: 1em;
+  font-size: 2em;
+}
+
+/* Dropdown Content (Hidden by Default) */
+#dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+#dropdown-content li {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropbtn:hover .dropdown-content {
+  display: block;
+}
+
+/* .show {
+  display:block;
+} */
   
-  .imdb {
-    font-size: 1.2em;
-    padding: 0.1em;
-    margin: 0;
-    color: black;
-    background-color: rgb(222, 181, 34);
-    border-radius: 0.2em;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  #main-nav {
-    background-color: #000;
-    overflow: hidden;
-    height: 3.5em;
-  }
-  
-  #nav-cont {
-    padding: 0;
-    float: left;
-    width: 100%;
-    position: relative;
-  }
-  
-  #main-nav ul {
-    list-style-type: none;
-    margin: auto;
-    padding: 0;
-    position: relative;
-    left: 50%;
-    float: left;
-  }
-  
-  #main-nav ul li {
-    font-size: 1.2em;
-    margin: auto;
-    margin-right: 1em;
-    margin-top: 0.6em;
-    position: relative;
-    right: 50%;
-    display: inline-block;
-    color: #fff;
-  }
-  
-  .form-control {
-    width: 100%;
-  }
-  
-  #menu-items {
-    padding: 0;
-    
-  }
-  
-  #menu {
-    width: 100%;
-    height: auto;
-    background-color: #128bb5;
-  }
-  
-  .login {
-    text-align: center;
-    padding: 0;
-  }
-  
-  .login a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  
-  #search {
-    padding: 0;
-    margin: 1em;
-    font-size: 2em;
-    background-color: blue;
-  }
-  
-  /* Dropdown Content (Hidden by Default) */
-  #dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  #dropdown-content li {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  .dropbtn:hover .dropdown-content {
-    display: block;
-  }
-  
-  /* .show {
-    display:block;
-  } */
-   
-  /* END NAVIGATION */
+/* END NAVIGATION */
 
   
   /* LOGIN PAGE */
@@ -260,74 +269,6 @@ body {
   }
   
   /* END LOGIN PAGE */
-
-  /* SIGN UP FORM "CREATE A NEW ACCOUNT*/
-  button {
-    background-color: #0057b7; /* IMDb blue, adjust as needed */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 5px;
-  }
-  
-  button:hover {
-    background-color: #0046a3; /* Darker shade on hover */
-    opacity: 0.9;
-  }
-
-  
-  #create-account-btn {
-    background: none;
-    border: none;
-    color: blue; /* Example color, match this with your link color */
-    cursor: pointer;
-    padding: 10px; /* Adjust padding to match your links */
-    font-size: inherit; /* Inherits the font size from parent */
-    text-align: center; /* Matches the alignment of other links */
-  }
-  
-  #create-account-btn:hover {
-    text-decoration: underline; /* Mimics link hover effect */
-  }
-  
-  .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
-  
-  .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-  }
-  
-  .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-  }
-
-  /* END SIGN-UP FORM*/
   
   /* CALENDAR PAGE */
   .container {
@@ -578,13 +519,6 @@ body {
     .movie-panel {
       flex-wrap: nowrap;
       border-radius: 0 0.7em 0.7em 0;
-    }
-
-    #create-account-btn {
-      display:flex;
-
-    .modal-content {
-      width: 90%;
     }
   }
 
