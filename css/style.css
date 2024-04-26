@@ -123,9 +123,7 @@ body {
 /* LOGIN PAGE */
 
 #content-2-wide {
-  margin-top: 1%;
-  margin-left: 3%;
-  margin-right: 3%;
+  margin: 3%;
   background-color: white;
   padding: 1em;
   border-radius: 2em;
@@ -136,7 +134,7 @@ h1 {
   font-size: 1.2em;
   text-align: center;
   font-weight: bold;
-  padding-bottom: 2%;
+  margin-bottom: 3%;
 }
 
 h2 {
@@ -161,15 +159,12 @@ ul {
 }
 
 li, .list-group {
-  /* background-color: rgb(18, 139, 181); */
-  /* width: 90%; */
-  /* margin: auto; */
   text-align: center;
   padding: 0.75em;
 }
 
 #perks li {
-  width: 90%;
+  width: 97%;
   padding: 0.4em;
   margin: auto;
   display: inline-flex;
@@ -199,6 +194,7 @@ li, .list-group {
   border-top: 0.2em solid rgb(181, 181, 181);
   border-left: 0em;
   width: 100%;
+  height: auto;
   position: relative;
   margin: auto;
   margin-top: 2%;
@@ -225,6 +221,11 @@ li, .list-group {
   width: 70%;
 }
 
+#divider-text {
+  font-size: 0.75em;
+  margin-bottom: 1.5%;
+}
+
 #divider-text, #signin-notice {
   text-align: center;
 }
@@ -239,7 +240,8 @@ li, .list-group {
 }
 
 #footer {
-  margin: 2% 3% 2% 3%;
+  margin: 3%;
+  margin-top: 0%;
   background-color: #000;
   border-radius: 2em;
   padding: 0.5em;
@@ -283,6 +285,7 @@ li, .list-group {
 
 .filter-title {
   font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
   font-size: 1em;
   font-weight: bold;
   margin-bottom: 10px;
@@ -407,14 +410,14 @@ li, .list-group {
 
 .footer span {
   margin: 0 5px;
-  color: #000;
+  color: rgb(222, 181, 34);
 }
 
 .filter-sidebar {
   width: 20%;
   height: 100%;
   border-right: 3px solid rgb(222, 181, 34);
-  padding-right: 2%;
+  padding-right: 1.5%;
 }
 
 .index-container {
@@ -422,9 +425,6 @@ li, .list-group {
   padding: 0%;
 }
 /* END CALENDAR PAGE */
-
-
-
 
 /* INDEX PAGE */
 
@@ -499,7 +499,7 @@ li, .list-group {
     font-size: small;
   }
 
-  #perks li p, #footer ul li a, .movie-info, .filter-btn, .dropdown-option {
+  #perks li p, #footer ul li a, .movie-info, .filter-btn, .dropdown-option, #divider-text {
     font-size: 1em;
   }
   .dropdown-option:hover, .footer button:hover, .login a:hover, .dropbtn:hover, .hovering:hover, #footer ul li a:hover, .filter-btn:hover {
@@ -516,6 +516,15 @@ li, .list-group {
   .movie-panel {
     flex-wrap: nowrap;
     border-radius: 0 0.7em 0.7em 0;
+  }
+
+  #content-2-wide {
+    margin: 2%;
+  }
+
+  #footer {
+    margin: 2%;
+    margin-top: 0%;
   }
 }
 
