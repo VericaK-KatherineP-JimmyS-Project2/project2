@@ -262,6 +262,22 @@ body {
   /* END LOGIN PAGE */
 
   /* SIGN UP FORM "CREATE A NEW ACCOUNT*/
+  button {
+    background-color: #0057b7; /* IMDb blue, adjust as needed */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: #0046a3; /* Darker shade on hover */
+    opacity: 0.9;
+  }
+
+  
   #create-account-btn {
     background: none;
     border: none;
@@ -269,7 +285,7 @@ body {
     cursor: pointer;
     padding: 10px; /* Adjust padding to match your links */
     font-size: inherit; /* Inherits the font size from parent */
-    text-align: left; /* Matches the alignment of other links */
+    text-align: center; /* Matches the alignment of other links */
   }
   
   #create-account-btn:hover {
