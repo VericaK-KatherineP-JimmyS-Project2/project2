@@ -18,7 +18,7 @@ body {
 .imdb {
   font-size: 1.2em;
   padding: 0.1em;
-  margin: 0;
+  margin: auto;
   color: black;
   background-color: rgb(222, 181, 34);
   border-radius: 0.2em;
@@ -29,7 +29,7 @@ body {
 #main-nav {
   background-color: #000;
   overflow: hidden;
-  height: 3.5em;
+  height: 3em;
 }
 
 #nav-cont {
@@ -52,7 +52,7 @@ body {
   font-size: 0.75em;
   margin: auto;
   margin-right: 0.5em;
-  margin-top: 0.6em;
+  margin-top: 0.8em;
   position: relative;
   right: 50%;
   display: inline-block;
@@ -60,6 +60,10 @@ body {
 }
 
 .form-control {
+  width: 100%;
+}
+
+#s {
   width: 100%;
 }
 
@@ -89,7 +93,6 @@ body {
   padding: 0;
   margin: 1em;
   font-size: 2em;
-  background-color: blue;
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -533,6 +536,20 @@ li, .list-group {
 
   #country {
     width: 20%;
+  }
+
+  #s {
+    width: 100%;
+  }
+
+  #main-nav {
+    height: 3.5em;
+  }
+
+  #main-nav ul li {
+    margin: auto;
+    margin-right: 0.5em;
+    margin-top: 0.6em;
   }
 }
 
