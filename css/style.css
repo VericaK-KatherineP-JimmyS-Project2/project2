@@ -1,7 +1,7 @@
 body {
     width: 100%;
     height: auto;
-    background-color: rgb(222, 181, 34);
+    background-color: rgb(255, 255, 255);
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -14,7 +14,6 @@ body {
     padding: 0.1em;
     margin: 0;
     color: black;
-    /* border: 0.2em solid #000; */
     background-color: rgb(222, 181, 34);
     border-radius: 0.2em;
     text-decoration: none;
@@ -34,19 +33,20 @@ body {
     position: relative;
   }
   
-  #navbar-nav {
+  #main-nav ul {
     list-style-type: none;
     margin: auto;
     padding: 0;
-    position: absolute;
+    position: relative;
     left: 50%;
     float: left;
-    width: auto;
   }
   
-  #navbar-nav li {
+  #main-nav ul li {
     font-size: 1.2em;
-    /* float: left; */
+    margin: auto;
+    margin-right: 1em;
+    margin-top: 0.6em;
     position: relative;
     right: 50%;
     display: inline-block;
@@ -57,26 +57,8 @@ body {
     width: 100%;
   }
   
-  /* #navbar-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  #navbar-nav ul li {
-    display: inline-block;
-    margin-right: 30%;
-  }
-  
-  #navbar-nav ul li:last-child {
-    margin-right: 0;
-  } */
-  
   #menu-items {
-    /* height: 3.5em; */
-    /* background-color: purple; */
     padding: 0;
-    /* width: 150%; */
     
   }
   
@@ -87,12 +69,8 @@ body {
   }
   
   .login {
-    /* height: 3.5em; */
     text-align: center;
-  /*   border: 0.1em solid rgb(181, 181, 181); 
-    border-radius: 0.2em;*/
     padding: 0;
-    margin: 1em;
   }
   
   .login a {
@@ -100,46 +78,12 @@ body {
     text-decoration: none;
   }
   
-  /* #login-cont {
-    border: 0.1 solid rgb(181, 181, 181);
-    border-radius: 0.2em;
-    padding: 0;
-    margin: 0;
-  } */
   
   #search {
-    /* height: 3.5em; */
     padding: 0;
     margin: 1em;
     font-size: 2em;
-    /* background-color: blue; */
-  }
-  
-  /* #main-nav ul li a {
-    display: block;
-    padding: 0.5em 1em;
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  #main-nav ul li a:hover {
-    background-color: #fff;
-    color: #000;
-  } */
-  
-  
-  /* .dropdown {
-    position: relative;
-    display: inline-block;
-  } */
-  
-  .dropbtn {
-    background-color: black;
-    color: white;
-    padding: 0.7em;
-    font-size: 1em;
-    border: none;
-    cursor: pointer;
+    background-color: blue;
   }
   
   /* Dropdown Content (Hidden by Default) */
@@ -168,6 +112,7 @@ body {
   } */
    
   /* END NAVIGATION */
+
   
   /* LOGIN PAGE */
   
@@ -350,7 +295,7 @@ body {
     font-size: 0.75em;
     width: 90%;
     padding: 1em;
-    border: 3px solid #ccc;
+    border: 3px solid rgb(222, 181, 34);
     cursor: pointer;
     text-align: left;
     border-radius: 0.7em;
@@ -462,7 +407,7 @@ body {
   .filter-sidebar {
     width: 20%;
     height: 100%;
-    border-right: 3px solid #ccc;
+    border-right: 3px solid rgb(222, 181, 34);
     padding-right: 2%;
   }
   
@@ -567,3 +512,5 @@ body {
       border-radius: 0 0.7em 0.7em 0;
     }
   }
+
+  
