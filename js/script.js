@@ -9,25 +9,26 @@ function toggleDropdown(id){
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-  var modal = document.getElementById('signup-modal'); // Get the modal
+  var modal = document.getElementById('signup-modal');
+  var btn = document.getElementById('create-account-btn');
+  var span = document.getElementsByClassName('close')[0];
 
-  // Attach a single event listener to the document body
-  document.body.addEventListener('click', function(event) {
-      // Check if the clicked element is the "Create a New Account" button
-      if (event.target.id === 'create-account-btn') {
-          modal.style.display = 'block'; // Open the modal
-      }
+  // Open modal
+  btn.onclick = function() {
+    modal.style.display = 'block';
+  }
 
-      // Check if the clicked element is the close button in the modal
-      if (event.target.classList.contains('close')) {
-          modal.style.display = 'none'; // Close the modal
-      }
+  // Close modal on close button click
+  span.onclick = function() {
+    modal.style.display = 'none';
+  }
 
-      // Check if the clicked element is the modal itself (outside the modal content)
-      if (event.target === modal) {
-          modal.style.display = 'none'; // Close the modal
-      }
-  });
-
-
+  // Close modal on outside click
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = 'none';
+    }
+  }
 });
+
+
